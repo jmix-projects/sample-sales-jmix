@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="sales">
+        <createTable tableName="SALES_CUSTOMER">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SALES_CUSTOMER"/>
+            </column>
+            <column name="EMAIL" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="sales">
+        <createTable tableName="SALES_ORDER">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SALES_ORDER"/>
+            </column>
+            <column name="CUSTOMER_ID" type="UUID"/>
+            <column name="NUMBER_OF_SPECIAL_PRODUCTS" type="INT"/>
+            <column name="AMOUNT" type="DECIMAL(19, 2)"/>
+            <column name="DATE_" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="3" author="sales">
+        <createTable tableName="SALES_ORDER_LINE">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SALES_ORDER_LINE"/>
+            </column>
+            <column name="QUANTITY" type="DECIMAL(19, 3)"/>
+            <column name="PRODUCT_ID" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORDER_ID" type="UUID"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="4" author="sales">
+        <createTable tableName="SALES_PRODUCT">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SALES_PRODUCT"/>
+            </column>
+            <column name="SPECIAL" type="BOOLEAN"/>
+            <column name="PRICE" type="DECIMAL(19, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="5" author="sales">
+        <addForeignKeyConstraint baseColumnNames="ORDER_ID" baseTableName="SALES_ORDER_LINE"
+                                 constraintName="FK_SALES_ORDER_LINE_ON_ORDER" referencedColumnNames="ID"
+                                 referencedTableName="SALES_ORDER"/>
+    </changeSet>
+    <changeSet id="6" author="sales">
+        <addForeignKeyConstraint baseColumnNames="PRODUCT_ID" baseTableName="SALES_ORDER_LINE"
+                                 constraintName="FK_SALES_ORDER_LINE_ON_PRODUCT" referencedColumnNames="ID"
+                                 referencedTableName="SALES_PRODUCT"/>
+    </changeSet>
+    <changeSet id="7" author="sales">
+        <addForeignKeyConstraint baseColumnNames="CUSTOMER_ID" baseTableName="SALES_ORDER"
+                                 constraintName="FK_SALES_ORDER_ON_CUSTOMER" referencedColumnNames="ID"
+                                 referencedTableName="SALES_CUSTOMER"/>
+    </changeSet>
+</databaseChangeLog>
