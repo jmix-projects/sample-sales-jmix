@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="simple-sales-jmix">
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="607d4ddd-607d-4ddd-596e-0968596e0968"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-14"/>
+            <column name="AMOUNT" value="85.20"/>
+            <column name="CUSTOMER_ID" value="5effc3b8-9445-2b86-cc30-92aabc7c3a6a"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="607d4ddd607d4ddd596e0968596e0968"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-14"/>
+            <column name="AMOUNT" value="85.20"/>
+            <column name="CUSTOMER_ID" value="5effc3b894452b86cc3092aabc7c3a6a"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6fa8452e-6fa8-452e-89cd-936e89cd936e"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-19"/>
+            <column name="AMOUNT" value="240.65"/>
+            <column name="CUSTOMER_ID" value="5effc3b8-9445-2b86-cc30-92aabc7c3a6a"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="6fa8452e6fa8452e89cd936e89cd936e"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-19"/>
+            <column name="AMOUNT" value="240.65"/>
+            <column name="CUSTOMER_ID" value="5effc3b894452b86cc3092aabc7c3a6a"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="70734fa9-7073-4fa9-5f9a-87a85f9a87a8"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-18"/>
+            <column name="AMOUNT" value="138.90"/>
+            <column name="CUSTOMER_ID" value="a09983f6-540c-5d49-a4cf-d2343b6ee44b"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="70734fa970734fa95f9a87a85f9a87a8"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-18"/>
+            <column name="AMOUNT" value="138.90"/>
+            <column name="CUSTOMER_ID" value="a09983f6540c5d49a4cfd2343b6ee44b"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="87fe4332-87fe-4332-870c-5875870c5875"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-13"/>
+            <column name="AMOUNT" value="49.99"/>
+            <column name="CUSTOMER_ID" value="a09983f6-540c-5d49-a4cf-d2343b6ee44b"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="87fe433287fe4332870c5875870c5875"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-12-13"/>
+            <column name="AMOUNT" value="49.99"/>
+            <column name="CUSTOMER_ID" value="a09983f6540c5d49a4cfd2343b6ee44b"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a64649a9-a646-49a9-8f15-cf798f15cf79"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-10-18"/>
+            <column name="AMOUNT" value="55.10"/>
+            <column name="CUSTOMER_ID" value="d8eebe12-1aa5-c187-b2d3-911a3aff9268"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="a64649a9a64649a98f15cf798f15cf79"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-10-18"/>
+            <column name="AMOUNT" value="55.10"/>
+            <column name="CUSTOMER_ID" value="d8eebe121aa5c187b2d3911a3aff9268"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="ec864774-ec86-4774-d935-2ce5d9352ce5"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-10-25"/>
+            <column name="AMOUNT" value="51.00"/>
+            <column name="CUSTOMER_ID" value="5effc3b8-9445-2b86-cc30-92aabc7c3a6a"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="ec864774ec864774d9352ce5d9352ce5"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-10-25"/>
+            <column name="AMOUNT" value="51.00"/>
+            <column name="CUSTOMER_ID" value="5effc3b894452b86cc3092aabc7c3a6a"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f12a4193-f12a-4193-c83d-2a46c83d2a46"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-10-22"/>
+            <column name="AMOUNT" value="283.55"/>
+            <column name="CUSTOMER_ID" value="7efdaa07-0844-749c-6b43-a1b3a8b2b803"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="f12a4193f12a4193c83d2a46c83d2a46"/>
+            <column name="VERSION" value="1"/>
+            <column name="DATE_" value="2017-10-22"/>
+            <column name="AMOUNT" value="283.55"/>
+            <column name="CUSTOMER_ID" value="7efdaa070844749c6b43a1b3a8b2b803"/>
+        </insert>
+
+
+    </changeSet>
+
+</databaseChangeLog>

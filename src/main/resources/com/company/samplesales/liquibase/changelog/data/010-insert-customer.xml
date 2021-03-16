@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="simple-sales-jmix">
+
+        <insert tableName="SALES_CUSTOMER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="d8eebe12-1aa5-c187-b2d3-911a3aff9268"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Parker Leighton"/>
+            <column name="EMAIL" value="leighton@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="d8eebe121aa5c187b2d3911a3aff9268"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Parker Leighton"/>
+            <column name="EMAIL" value="leighton@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="7efdaa07-0844-749c-6b43-a1b3a8b2b803"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Shelby Robinson"/>
+            <column name="EMAIL" value="robinson@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="7efdaa070844749c6b43a1b3a8b2b803"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Shelby Robinson"/>
+            <column name="EMAIL" value="robinson@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="a09983f6-540c-5d49-a4cf-d2343b6ee44b"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Sidney Chandler"/>
+            <column name="EMAIL" value="chandler@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="a09983f6540c5d49a4cfd2343b6ee44b"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Sidney Chandler"/>
+            <column name="EMAIL" value="chandler@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5effc3b8-9445-2b86-cc30-92aabc7c3a6a"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Hildred Ellis"/>
+            <column name="EMAIL" value="ellis@mail.com"/>
+        </insert>
+
+        <insert tableName="SALES_CUSTOMER" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="5effc3b894452b86cc3092aabc7c3a6a"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Hildred Ellis"/>
+            <column name="EMAIL" value="ellis@mail.com"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
+

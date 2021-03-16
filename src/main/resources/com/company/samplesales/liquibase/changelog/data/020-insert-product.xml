@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="simple-sales-jmix">
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="401f2128-8359-1cf3-6b8f-83ff2ee000f0"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Outback Power Nano-Carbon Battery 12V"/>
+            <column name="PRICE" value="6.25"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="401f212883591cf36b8f83ff2ee000f0"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Outback Power Nano-Carbon Battery 12V"/>
+            <column name="PRICE" value="6.25"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e62906e5-1f1a-1bf1-9a57-c798293e86d7"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Fullriver Sealed Battery 6V"/>
+            <column name="PRICE" value="5.10"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="e62906e51f1a1bf19a57c798293e86d7"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Fullriver Sealed Battery 6V"/>
+            <column name="PRICE" value="5.10"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1d2272b5-a702-e3d4-6d2c-7cd360f93182"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Solar-One HUP Flooded Battery 48V"/>
+            <column name="PRICE" value="210.55"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="1d2272b5a702e3d46d2c7cd360f93182"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Solar-One HUP Flooded Battery 48V"/>
+            <column name="PRICE" value="210.55"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e4283740-960a-1180-783d-3ffe2cf6af90"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Four Star Solar Crown Battery Bank"/>
+            <column name="PRICE" value="29.25"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="e4283740960a1180783d3ffe2cf6af90"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Four Star Solar Crown Battery Bank"/>
+            <column name="PRICE" value="29.25"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="008f9335-c3a4-8e3b-cb59-a2e6b1e6b283"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Cotek Battery Charger"/>
+            <column name="PRICE" value="30.10"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="008f9335c3a48e3bcb59a2e6b1e6b283"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Cotek Battery Charger"/>
+            <column name="PRICE" value="30.10"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e8f27ecf-4024-aa12-9362-7a11f150e65a"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Outback Power Remote Power System"/>
+            <column name="PRICE" value="49.99"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="e8f27ecf4024aa1293627a11f150e65a"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Outback Power Remote Power System"/>
+            <column name="PRICE" value="49.99"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="6a6522f0-6a0b-fc38-5d58-5cad19e53826"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Fronius Symo Lite Inverter"/>
+            <column name="PRICE" value="42.90"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="6a6522f06a0bfc385d585cad19e53826"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Fronius Symo Lite Inverter"/>
+            <column name="PRICE" value="42.90"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="345e429f-6d74-7d1a-d1ab-9f6c67c10fe5"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Astronergy Solar Panel"/>
+            <column name="PRICE" value="23.00"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="345e429f6d747d1ad1ab9f6c67c10fe5"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Astronergy Solar Panel"/>
+            <column name="PRICE" value="23.00"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="e0887c63-06e7-abd2-425d-9235124bae3d"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="SunPower Flexible Solar Panel"/>
+            <column name="PRICE" value="25.00"/>
+        </insert>
+
+        <insert tableName="SALES_PRODUCT" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="e0887c6306e7abd2425d9235124bae3d"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="SunPower Flexible Solar Panel"/>
+            <column name="PRICE" value="25.00"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
+

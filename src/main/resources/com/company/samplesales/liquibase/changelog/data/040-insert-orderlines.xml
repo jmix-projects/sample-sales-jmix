@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="simple-sales-jmix">
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+        <column name="ID" value="2b5774f5-bf30-8db0-1b98-ec638130c240"/>
+        <column name="VERSION" value="1"/>
+        <column name="ORDER_ID" value="607d4ddd-607d-4ddd-596e-0968596e0968"/>
+        <column name="PRODUCT_ID" value="e62906e5-1f1a-1bf1-9a57-c798293e86d7"/>
+        <column name="QUANTITY" value="2.000"/>
+    </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="2b5774f5bf308db01b98ec638130c240"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="607d4ddd607d4ddd596e0968596e0968"/>
+            <column name="PRODUCT_ID" value="e62906e51f1a1bf19a57c798293e86d7"/>
+            <column name="QUANTITY" value="2.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="3e312486-8fff-7ce6-9f21-8cca69c405be"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="607d4ddd-607d-4ddd-596e-0968596e0968"/>
+            <column name="PRODUCT_ID" value="e0887c63-06e7-abd2-425d-9235124bae3d"/>
+            <column name="QUANTITY" value="3.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="3e3124868fff7ce69f218cca69c405be"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="607d4ddd607d4ddd596e0968596e0968"/>
+            <column name="PRODUCT_ID" value="e0887c6306e7abd2425d9235124bae3d"/>
+            <column name="QUANTITY" value="3.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="61d06bbb-1e8d-d973-21f3-d42902238548"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="6fa8452e-6fa8-452e-89cd-936e89cd936e"/>
+            <column name="PRODUCT_ID" value="008f9335-c3a4-8e3b-cb59-a2e6b1e6b283"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="61d06bbb1e8dd97321f3d42902238548"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="6fa8452e6fa8452e89cd936e89cd936e"/>
+            <column name="PRODUCT_ID" value="008f9335c3a48e3bcb59a2e6b1e6b283"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="5b07767e-d7ac-e89e-bfb2-04cacf19003c"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="6fa8452e-6fa8-452e-89cd-936e89cd936e"/>
+            <column name="PRODUCT_ID" value="1d2272b5-a702-e3d4-6d2c-7cd360f93182"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="5b07767ed7ace89ebfb204cacf19003c"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="6fa8452e6fa8452e89cd936e89cd936e"/>
+            <column name="PRODUCT_ID" value="1d2272b5a702e3d46d2c7cd360f93182"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="94ece137-de73-2527-4118-ccd6a5075688"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="70734fa9-7073-4fa9-5f9a-87a85f9a87a8"/>
+            <column name="PRODUCT_ID" value="6a6522f0-6a0b-fc38-5d58-5cad19e53826"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="94ece137de7325274118ccd6a5075688"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="70734fa970734fa95f9a87a85f9a87a8"/>
+            <column name="PRODUCT_ID" value="6a6522f06a0bfc385d585cad19e53826"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="171f2d81-3b98-9f89-ef1d-19fa1a99f57b"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="70734fa9-7073-4fa9-5f9a-87a85f9a87a8"/>
+            <column name="PRODUCT_ID" value="345e429f-6d74-7d1a-d1ab-9f6c67c10fe5"/>
+            <column name="QUANTITY" value="2.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="171f2d813b989f89ef1d19fa1a99f57b"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="70734fa970734fa95f9a87a85f9a87a8"/>
+            <column name="PRODUCT_ID" value="345e429f6d747d1ad1ab9f6c67c10fe5"/>
+            <column name="QUANTITY" value="2.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="62b315c4-0140-cfea-0aa2-ef0d1b1ea3f6"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="70734fa9-7073-4fa9-5f9a-87a85f9a87a8"/>
+            <column name="PRODUCT_ID" value="e0887c63-06e7-abd2-425d-9235124bae3d"/>
+            <column name="QUANTITY" value="2.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="62b315c40140cfea0aa2ef0d1b1ea3f6"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="70734fa970734fa95f9a87a85f9a87a8"/>
+            <column name="PRODUCT_ID" value="e0887c6306e7abd2425d9235124bae3d"/>
+            <column name="QUANTITY" value="2.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="9a8064af-6bdd-58e9-6672-f4a1a7a79480"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="87fe4332-87fe-4332-870c-5875870c5875"/>
+            <column name="PRODUCT_ID" value="e8f27ecf-4024-aa12-9362-7a11f150e65a"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="9a8064af6bdd58e96672f4a1a7a79480"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="87fe433287fe4332870c5875870c5875"/>
+            <column name="PRODUCT_ID" value="e8f27ecf4024aa1293627a11f150e65a"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="46198251-cac1-a9c6-4a56-5fb12b370750"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="a64649a9-a646-49a9-8f15-cf798f15cf79"/>
+            <column name="PRODUCT_ID" value="008f9335-c3a4-8e3b-cb59-a2e6b1e6b283"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="46198251cac1a9c64a565fb12b370750"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="a64649a9a64649a98f15cf798f15cf79"/>
+            <column name="PRODUCT_ID" value="008f9335c3a48e3bcb59a2e6b1e6b283"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="1e7c1682-53d8-7d11-8aad-2d4fe475ba74"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="a64649a9-a646-49a9-8f15-cf798f15cf79"/>
+            <column name="PRODUCT_ID" value="401f2128-8359-1cf3-6b8f-83ff2ee000f0"/>
+            <column name="QUANTITY" value="4.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="1e7c168253d87d118aad2d4fe475ba74"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="a64649a9a64649a98f15cf798f15cf79"/>
+            <column name="PRODUCT_ID" value="401f212883591cf36b8f83ff2ee000f0"/>
+            <column name="QUANTITY" value="4.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="67a662ae-3b1b-5b3d-d434-e459bd0f983b"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="ec864774-ec86-4774-d935-2ce5d9352ce5"/>
+            <column name="PRODUCT_ID" value="e62906e5-1f1a-1bf1-9a57-c798293e86d7"/>
+            <column name="QUANTITY" value="10.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="67a662ae3b1b5b3dd434e459bd0f983b"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="ec864774ec864774d9352ce5d9352ce5"/>
+            <column name="PRODUCT_ID" value="e62906e51f1a1bf19a57c798293e86d7"/>
+            <column name="QUANTITY" value="10.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4ec120de-1ced-ad44-5817-fec5e632e3cd"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="f12a4193-f12a-4193-c83d-2a46c83d2a46"/>
+            <column name="PRODUCT_ID" value="008f9335-c3a4-8e3b-cb59-a2e6b1e6b283"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="4ec120de1cedad445817fec5e632e3cd"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="f12a4193f12a4193c83d2a46c83d2a46"/>
+            <column name="PRODUCT_ID" value="008f9335c3a48e3bcb59a2e6b1e6b283"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="3b42a5d5-e624-2aba-9709-3af659d46b3a"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="f12a4193-f12a-4193-c83d-2a46c83d2a46"/>
+            <column name="PRODUCT_ID" value="6a6522f0-6a0b-fc38-5d58-5cad19e53826"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="3b42a5d5e6242aba97093af659d46b3a"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="f12a4193f12a4193c83d2a46c83d2a46"/>
+            <column name="PRODUCT_ID" value="6a6522f06a0bfc385d585cad19e53826"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="4179ea59-a927-5754-c7b2-17a02f9f4df7"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="f12a4193-f12a-4193-c83d-2a46c83d2a46"/>
+            <column name="PRODUCT_ID" value="1d2272b5-a702-e3d4-6d2c-7cd360f93182"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+        <insert tableName="SALES_ORDER_LINE" dbms="oracle, mysql, mariadb">
+            <column name="ID" value="4179ea59a9275754c7b217a02f9f4df7"/>
+            <column name="VERSION" value="1"/>
+            <column name="ORDER_ID" value="f12a4193f12a4193c83d2a46c83d2a46"/>
+            <column name="PRODUCT_ID" value="1d2272b5a702e3d46d2c7cd360f93182"/>
+            <column name="QUANTITY" value="1.000"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
