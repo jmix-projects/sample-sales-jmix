@@ -18,5 +18,5 @@ The application project covers the following aspects:
 
 Based on Jmix Framework 0.3.1
 
-Issues
+# Issues
 Please use https://www.cuba-platform.com/discuss/c/jmix/40 for discussion, support and reporting problems corresponding to this sample.
