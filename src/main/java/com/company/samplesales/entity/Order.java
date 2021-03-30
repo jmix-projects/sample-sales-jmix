@@ -14,7 +14,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 @JmixEntity
@@ -26,9 +25,12 @@ public class Order {
     @Id
     private UUID id;
 
+    @Column(name = "ORDER_NUMBER")
+    private String orderNumber;
+
     @Composition
     @OneToMany(mappedBy = "order")
-    private List<OrderLine> lines;
+    private java.util.List<OrderLine> lines;
 
     @JoinColumn(name = "CUSTOMER_ID")
     @ManyToOne(fetch = FetchType.LAZY)
@@ -75,6 +77,22 @@ public class Order {
     @Column(name = "DELETED_DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date deletedDate;
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
+    }
+
+    public void setLines(java.util.List<OrderLine> lines) {
+        this.lines = lines;
+    }
+
+    public java.util.List<OrderLine> getLines() {
+        return lines;
+    }
 
     public Date getDeletedDate() {
         return deletedDate;
@@ -130,14 +148,6 @@ public class Order {
 
     public void setVersion(Integer version) {
         this.version = version;
-    }
-
-    public List<OrderLine> getLines() {
-        return lines;
-    }
-
-    public void setLines(List<OrderLine> lines) {
-        this.lines = lines;
     }
 
     public Customer getCustomer() {

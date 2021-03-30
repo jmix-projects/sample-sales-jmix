@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://jmix.io/schema/rest/services">
+    <!-- <service name="sales_OrderService">-->
+    <service name="_OrderServiceBean">
+        <method name="calculatePrice">
+        </method>
+        <method name="validateOrder">
+            <param name="order"/>
+            <param name="validationDate"/>
+        </method>
+        <method name="overloadedMethod">
+            <param name="intParam" type="int"/>
+        </method>
+        <method name="overloadedMethod">
+            <param name="stringParam" type="java.lang.String"/>
+        </method>
+    </service>
+</services>

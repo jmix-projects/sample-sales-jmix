@@ -48,12 +48,14 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="showEntityInfo" type="showEntityInfo"/>
             </actions>
             <columns>
                 <column id="date"/>
                 <column id="customer"/>
                 <column id="amount"/>
                 <column id="numberOfSpecialProducts"/>
+                <column id="orderNumber"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
