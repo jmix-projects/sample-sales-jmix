@@ -9,4 +9,8 @@
             <property name="special"/>
         </property>
     </fetchPlan>
+    <fetchPlan entity="sales_Order" name="order-fetch-plan" extends="_base">
+        <property name="lines" fetchPlan="_base"/>
+        <property name="customer" fetchPlan="_base"/>
+    </fetchPlan>
 </fetchPlans>

@@ -41,8 +41,9 @@
         <label value="Orders"/>
         <table id="ordersTable" width="350px" dataContainer="ordersDc">
             <columns>
-                <column id="date"  align="CENTER"/>
+                <column id="date" align="CENTER"/>
                 <column id="amount" align="CENTER"/>
+                <column id="orderNumber"/>
             </columns>
         </table>
         <hbox id="editActions" spacing="true">

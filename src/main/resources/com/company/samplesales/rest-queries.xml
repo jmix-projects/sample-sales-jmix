@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<queries xmlns="http://jmix.io/schema/rest/queries">
+    <query name="ordersByIds" entity="sales_Order" fetchPlan="order-fetch-plan">
+        <jpql><![CDATA[select e from sales_Order e where e.id in :ids]]></jpql>
+        <params>
+            <param name="ids" type="java.util.UUID[]"/>
+        </params>
+    </query>
+    <query name="ordersByCustomerName" entity="sales_Order" fetchPlan="order-fetch-plan">
+        <jpql><![CDATA[select e from sales_Order e where e.customer.name = :customerName]]></jpql>
+        <params>
+            <param name="customerName" type="java.lang.String"/>
+        </params>
+    </query>
+    <query name="ordersByDate" entity="sales_Order" fetchPlan="order-fetch-plan">
+        <jpql><![CDATA[select e from sales_Order e where e.date = :date]]></jpql>
+        <params>
+            <param name="date" type="java.time.LocalDate"/>
+        </params>
+    </query>
+</queries>

@@ -46,6 +46,7 @@
                 <dateField id="dateField" property="date"/>
                 <textField id="numberOfSpecialProductsField" property="numberOfSpecialProducts" editable="false"/>
                 <textField id="amountField" property="amount" editable="false"/>
+                <textField id="orderNumberField" property="orderNumber"/>
             </column>
         </form>
         <groupBox id="linesBox">
