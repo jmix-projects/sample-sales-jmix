@@ -13,4 +13,7 @@
         <property name="lines" fetchPlan="_base"/>
         <property name="customer" fetchPlan="_base"/>
     </fetchPlan>
+    <fetchPlan entity="sales_Order" name="order-with-details" extends="_base">
+        <property name="customer" fetchPlan="_base"/>
+    </fetchPlan>
 </fetchPlans>

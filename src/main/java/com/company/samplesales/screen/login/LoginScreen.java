@@ -1,6 +1,7 @@
 package com.company.samplesales.screen.login;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.securityui.authentication.AuthDetails;
 import io.jmix.securityui.authentication.LoginScreenAuthenticationSupport;
@@ -13,7 +14,6 @@ import io.jmix.ui.component.TextField;
 import io.jmix.ui.navigation.Route;
 import io.jmix.ui.screen.*;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
@@ -25,7 +25,6 @@ import java.util.Locale;
 @Route(path = "login", root = true)
 public class LoginScreen extends Screen {
 
-    private static final Logger log = org.slf4j.LoggerFactory.getLogger(LoginScreen.class);
     @Autowired
     private TextField<String> usernameField;
 
@@ -49,6 +48,8 @@ public class LoginScreen extends Screen {
 
     @Autowired
     private CoreProperties coreProperties;
+    @Autowired
+    private MessageTools messageTools;
 
     @Subscribe
     private void onInit(InitEvent event) {
@@ -58,8 +59,8 @@ public class LoginScreen extends Screen {
     }
 
     private void initLocalesField() {
-        localesField.setOptionsMap(coreProperties.getAvailableLocales());
-        localesField.setValue(coreProperties.getAvailableLocales().values().iterator().next());
+        localesField.setOptionsMap(messageTools.getAvailableLocalesMap());
+        localesField.setValue(coreProperties.getAvailableLocales().get(0));
     }
 
     private void initDefaultCredentials() {

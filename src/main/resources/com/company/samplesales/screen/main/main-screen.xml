@@ -11,7 +11,9 @@
                     <image id="logoImage"
                            stylename="app-icon"
                            scaleMode="SCALE_DOWN">
-                        <theme path="branding/app-icon-menu.svg"/>
+                        <resource>
+                            <theme path="branding/app-icon-menu.svg"/>
+                        </resource>
                     </image>
                     <label id="appTitleLabel"
                            stylename="app-title"
@@ -37,7 +39,7 @@
                 </cssLayout>
             </drawer>
             <workArea id="workArea"
-                      stylename="c-workarea"
+                      stylename="jmix-workarea"
                       height="100%">
                 <initialLayout spacing="true" margin="true">
                 </initialLayout>
