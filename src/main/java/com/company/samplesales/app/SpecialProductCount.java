@@ -12,15 +12,9 @@ public class SpecialProductCount {
     private DataManager dataManager;
 
     public int getSpecialProductsNumber(Order order){
-//        long count = dataManager.load(OrderLine.class)
-//                .query("select e from sales_OrderLine e where e.order = :order")
-//                .parameter("order", order)
-//                .fetchPlan("orderLine-with-product")
-//                .list().stream()
-//                .filter(orderLine -> Boolean.TRUE.equals(orderLine.getProduct().getSpecial()))
-//                .count();
+
         long count = order.getLines().stream()
-                .filter(orderLine -> Boolean.TRUE.equals(orderLine.getProduct().getSpecial()))
+                .filter(orderLine -> orderLine.getProduct().getSpecial())
                 .count();
 
         return (int) count;
