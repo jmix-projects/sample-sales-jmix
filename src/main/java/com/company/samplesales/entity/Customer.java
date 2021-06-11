@@ -25,6 +25,9 @@ public class Customer {
     @Id
     private UUID id;
 
+    @Column(name = "GRADE")
+    private String grade;
+
     @Email
     @Column(name = "EMAIL")
     private String email;
@@ -64,6 +67,14 @@ public class Customer {
     @Column(name = "DELETED_DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date deletedDate;
+
+    public CustomerGrade getGrade() {
+        return grade == null ? null : CustomerGrade.fromId(grade);
+    }
+
+    public void setGrade(CustomerGrade grade) {
+        this.grade = grade == null ? null : grade.getId();
+    }
 
     public Date getDeletedDate() {
         return deletedDate;

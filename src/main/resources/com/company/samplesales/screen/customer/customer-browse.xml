@@ -47,7 +47,7 @@
             <columns>
                 <column id="name"/>
                 <column id="email"/>
-
+                <column id="grade"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
