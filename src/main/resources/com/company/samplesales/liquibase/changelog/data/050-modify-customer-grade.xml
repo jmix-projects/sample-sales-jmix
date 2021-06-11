@@ -8,11 +8,11 @@
     <changeSet id="1" author="simple-sales-jmix">
 
         <update tableName="SALES_CUSTOMER" dbms="postgresql, mssql, hsqldb">
-            <column name="GRADE" value="BRONZE"/>
+            <column name="GRADE" value="Bronze"/>
         </update>
 
         <update tableName="SALES_CUSTOMER" dbms="oracle, mysql, mariadb">
-            <column name="GRADE" value="BRONZE"/>
+            <column name="GRADE" value="Bronze"/>
         </update>
 
     </changeSet>
