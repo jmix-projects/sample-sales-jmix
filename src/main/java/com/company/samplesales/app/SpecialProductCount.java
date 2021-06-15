@@ -5,6 +5,8 @@ import io.jmix.core.DataManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component(SpecialProductCount.NAME)
 public class SpecialProductCount {
     public static final String NAME = "_SpecialProductCount";
@@ -14,7 +16,10 @@ public class SpecialProductCount {
     public int getSpecialProductsNumber(Order order){
 
         long count = order.getLines().stream()
-                .filter(orderLine -> orderLine.getProduct().getSpecial())
+                .filter(orderLine -> {
+                    Optional<Boolean> special = Optional.ofNullable(orderLine.getProduct().getSpecial());
+                    return special.orElse(false);
+                })
                 .count();
 
         return (int) count;
