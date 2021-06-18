@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenXychart.caption">
+    <layout>
+        <chart:xyChart startDuration="1">
+            <chart:data>
+                <chart:item>
+                    <chart:property name="ax" value="1"/>
+                    <chart:property name="ay" value="5"/>
+                    <chart:property name="bx" value="3"/>
+                    <chart:property name="by" value="7"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="ax" value="2"/>
+                    <chart:property name="ay" value="6"/>
+                    <chart:property name="bx" value="1"/>
+                    <chart:property name="by" value="2"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="ax" value="7"/>
+                    <chart:property name="ay" value="2"/>
+                    <chart:property name="bx" value="3"/>
+                    <chart:property name="by" value="1"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="ax" value="7"/>
+                    <chart:property name="ay" value="2"/>
+                    <chart:property name="bx" value="3"/>
+                    <chart:property name="by" value="3"/>
+                </chart:item>
+            </chart:data>
+            <chart:graphs>
+                <chart:graph balloonText="x:[[x]] y:[[y]]"
+                             xField="ax"
+                             fillToAxis="x"
+                             yField="ay"/>
+                <chart:graph balloonText="x:[[x]] y:[[y]]"
+                             fillToAxis="y"
+                             xField="bx"
+                             yField="by"/>
+            </chart:graphs>
+            <chart:valueAxes>
+                <chart:axis id="x"
+                            axisAlpha="0"
+                            dashLength="1"
+                            position="BOTTOM"
+                            title="X Axis"/>
+                <chart:axis id="y"
+                            axisAlpha="0"
+                            dashLength="1"
+                            position="LEFT"
+                            title="Y Axis"/>
+            </chart:valueAxes>
+        </chart:xyChart>
+    </layout>
+</window>

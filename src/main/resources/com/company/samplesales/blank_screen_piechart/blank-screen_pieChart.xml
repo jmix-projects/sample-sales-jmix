@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenPiechart.caption">
+    <layout>
+        <chart:pieChart id="pie3dChart"
+                        angle="30"
+                        balloonText="[[title]]&lt;br&gt;&lt;span style='font-size:14px'&gt;
+                &lt;strong&gt;[[value]]&lt;/strong&gt; ([[percents]]%)&lt;/span&gt;"
+                        depth3D="15"
+                        height="50%"
+                        outlineAlpha="0.4"
+                        titleField="country"
+                        valueField="litres"
+                        width="50%">
+            <chart:data>
+                <chart:item>
+                    <chart:property name="country" value="UK"/>
+                    <chart:property name="litres" value="5"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Belgium"/>
+                    <chart:property name="litres" value="10"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Swiss"/>
+                    <chart:property name="litres" value="15"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Ireland"/>
+                    <chart:property name="litres" value="20"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="England"/>
+                    <chart:property name="litres" value="35"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Russia"/>
+                    <chart:property name="litres" value="40"/>
+                </chart:item>
+            </chart:data>
+            <chart:legend autoMargins="false"
+                          marginRight="80"
+                          markerType="CIRCLE"
+                          position="RIGHT"/>
+            <chart:export/>
+        </chart:pieChart>
+    </layout>
+</window>

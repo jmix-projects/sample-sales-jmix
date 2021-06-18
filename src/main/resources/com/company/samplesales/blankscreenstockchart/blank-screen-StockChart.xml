@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenStockchart.caption">
+    <data>
+        <collection id="stockChartDc1" class="com.company.samplesales.entity.DateValueVolume">
+            <fetchPlan extends="_base"/>
+        </collection>
+        <collection id="stockChartDc2" class="com.company.samplesales.entity.DateValueVolume">
+            <fetchPlan extends="_base"/>
+        </collection>
+        <collection id="stockChartDc3" class="com.company.samplesales.entity.DateValueVolume">
+            <fetchPlan extends="_base"/>
+        </collection>
+        <collection id="stockChartDc4" class="com.company.samplesales.entity.DateValueVolume">
+            <fetchPlan extends="_base"/>
+        </collection>
+    </data>
+    <layout>
+        <chart:stockChart id="stockChart"
+                          height="100%"
+                          mainDataSet="dataSet4"
+                          theme="LIGHT"
+                          width="100%">
+            <chart:dataSets>
+                <chart:dataSet id="dataSet1"
+                               categoryField="date"
+                               dataContainer="stockChartDc1"
+                               title="First data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet2"
+                               categoryField="date"
+                               dataContainer="stockChartDc2"
+                               title="Second data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet3"
+                               categoryField="date"
+                               dataContainer="stockChartDc3"
+                               title="Third data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet4"
+                               categoryField="date"
+                               dataContainer="stockChartDc4"
+                               title="Fourth data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+            </chart:dataSets>
+            <chart:panels>
+                <chart:panel percentHeight="70"
+                             showCategoryAxis="false"
+                             title="Value">
+                    <chart:stockGraphs>
+                        <chart:stockGraph id="stockGraph"
+                                          balloonText="[[title]]:&lt;strong&gt;[[value]]&lt;/strong&gt;"
+                                          comparable="true"
+                                          compareField="value"
+                                          compareGraphBalloonText="[[title]]:&lt;strong&gt;                                               [[value]]&lt;/strong&gt;"
+                                          valueField="value"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend periodValueTextComparing="[[percents.value.close]]%"
+                                       periodValueTextRegular="[[value.close]]"/>
+                </chart:panel>
+                <chart:panel id="panel"
+                             percentHeight="30"
+                             title="Volume">
+                    <chart:stockGraphs>
+                        <chart:stockGraph fillAlphas="1"
+                                          showBalloon="false"
+                                          type="COLUMN"
+                                          valueField="volume"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend periodValueTextRegular="[[value.close]]"/>
+                </chart:panel>
+            </chart:panels>
+            <chart:chartScrollbarSettings graph="stockGraph"/>
+            <chart:chartCursorSettings cursorAlpha="0.1"
+                                       fullWidth="true"
+                                       valueBalloonsEnabled="true"
+                                       valueLineAlpha="0.5"
+                                       valueLineBalloonEnabled="true"
+                                       valueLineEnabled="true"/>
+            <chart:periodSelector position="LEFT">
+                <chart:periods>
+                    <chart:period count="1"
+                                  label="1 month"
+                                  period="MONTHS"
+                                  selected="true"/>
+                    <chart:period count="1"
+                                  label="1 year"
+                                  period="YEARS"/>
+                    <chart:period label="YTD"
+                                  period="YTD"/>
+                    <chart:period label="MAX"
+                                  period="MAX"/>
+                </chart:periods>
+            </chart:periodSelector>
+            <chart:dataSetSelector position="LEFT"/>
+            <chart:export/>
+        </chart:stockChart>
+    </layout>
+</window>

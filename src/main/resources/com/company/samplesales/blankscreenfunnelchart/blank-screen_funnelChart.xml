@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenFunnelchart.caption">
+
+    <layout>
+        <chart:funnelChart id="funnel"
+                           angle="40"
+                           balloonText="[[title]]: [[value]]"
+                           depth3D="100"
+                           height="50%"
+                           labelPosition="RIGHT"
+                           marginLeft="50"
+                           marginRight="240"
+                           outlineAlpha="1"
+                           outlineColor="#FFFFFF"
+                           outlineThickness="2"
+                           startX="-500"
+                           titleField="title"
+                           valueField="value"
+                           width="50%">
+            <chart:data>
+                <chart:item>
+                    <chart:property name="title" value="Roses" />
+                    <chart:property name="value" value="5"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="title" value="Tulips"/>
+                    <chart:property name="value" value="15"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="title" value="Dandelions"/>
+                    <chart:property name="value" value="9"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="title" value="Astras"/>
+                    <chart:property name="value" value="7"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="title" value="Pions"/>
+                    <chart:property name="value" value="20"/>
+                </chart:item>
+            </chart:data>
+            <chart:balloon fixedPosition="true"/>
+            <chart:export/>
+        </chart:funnelChart>
+    </layout>
+</window>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://chartsIncrementalUpdating.caption">
+    <data>
+        <collection id="ordersDc" class="com.company.samplesales.entity.ChartsOrder">
+            <fetchPlan extends="_base"/>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <timer id="updateChartTimer" delay="2" onTimer="updateChart" repeating="true" autostart="true"/>
+    </facets>
+    <layout>
+        <chart:serialChart id="orderHistoryChart"
+                           categoryField="date"
+                           dataContainer="ordersDc"
+                           width="100%">
+            <chart:graphs>
+                <chart:graph valueField="amount"/>
+            </chart:graphs>
+        </chart:serialChart>
+    </layout>
+</window>

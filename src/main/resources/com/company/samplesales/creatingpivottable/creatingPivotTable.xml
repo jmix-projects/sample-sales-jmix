@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://creatingPivotTable.caption">
+    <data>
+        <collection id="tipsDc" class="com.company.samplesales.entity.TipInfo">
+            <fetchPlan extends="_base"/>
+        </collection>
+    </data>
+    <layout>
+        <chart:pivotTable id="pivotTable"
+                          dataContainer="tipsDc"
+                          renderer="HEATMAP">
+            <chart:properties>
+                <chart:property name="totalBill"/>
+                <chart:property name="tip"/>
+                <chart:property name="sex"/>
+                <chart:property name="smoker"/>
+                <chart:property name="day"/>
+                <chart:property name="time"/>
+                <chart:property name="size"/>
+            </chart:properties>
+            <chart:columns>
+                <chart:column value="day"/>
+                <chart:column value="time"/>
+            </chart:columns>
+            <chart:rows>
+                <chart:row value="sex"/>
+                <chart:row value="smoker"/>
+            </chart:rows>
+        </chart:pivotTable>
+        <button id="xlsExport" caption="Export table" primary="true"/>
+    </layout>
+</window>

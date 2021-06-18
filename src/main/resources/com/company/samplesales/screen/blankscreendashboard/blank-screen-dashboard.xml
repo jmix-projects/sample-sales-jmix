@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:dashboard="http://jmix.io/schema/dashboards/ui"
+        caption="msg://blankScreenDashboard.caption">
+    <layout>
+        <vbox height="100%" width="100%">
+            <dashboard:dashboard id="dashboardId" jsonPath="com/company/samplesales/dashboard.json">
+
+            </dashboard:dashboard>
+        </vbox>
+    </layout>
+</window>

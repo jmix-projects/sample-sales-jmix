@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreen.caption">
+    <layout>
+        <chart:gaugeChart id="gauge">
+            <chart:arrows>
+                <chart:arrow value="60"/>
+            </chart:arrows>
+        </chart:gaugeChart>
+
+
+    </layout>
+</window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenDatabindingapi.caption">
+    <layout>
+        <chart:pieChart id="pieChart"
+                        titleField="key"
+                        valueField="value"/>
+    </layout>
+</window>

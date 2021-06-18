@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenGanttchart.caption">
+    <layout>
+        <chart:ganttChart id="ganttChart"
+                          additionalSegmentFields="task"
+                          balloonDateFormat="JJ:NN"
+                          brightnessStep="10"
+                          categoryField="category"
+                          colorField="color"
+                          columnWidth="0.5"
+                          durationField="duration"
+                          height="50%"
+                          marginRight="70"
+                          period="HOURS"
+                          rotate="true"
+                          segmentsField="segments"
+                          startDate="2016-01-01"
+                          startField="start"
+                          theme="LIGHT"
+                          width="50%">
+            <chart:graph balloonText="&lt;strong&gt;[[task]]&lt;/strong&gt;: [[open]] [[value]]"
+                         fillAlphas="1"/>
+            <chart:valueAxis maximum="31"
+                             minimum="7"
+                             type="DATE"/>
+            <chart:valueScrollbar autoGridCount="true"
+                                  color="BLACK"/>
+            <chart:chartCursor cursorAlpha="0"
+                               cursorColor="#55bb76"
+                               fullWidth="true"
+                               valueLineAlpha="0.5"
+                               valueBalloonsEnabled="false"
+                               valueLineBalloonEnabled="true"
+                               valueLineEnabled="true"
+                               valueZoomable="true"
+                               zoomable="false"/>
+            <chart:export/>
+        </chart:ganttChart>
+    </layout>
+</window>

@@ -1,0 +1,62 @@
+{
+  "id": "f8eca917-eeca-e018-03ed-d3fcda4981e8",
+  "title": "Dashboard",
+  "code": "dashboard",
+  "visualModel": {
+    "id": "31c8f90b-5049-ac64-17b0-46b493f23671",
+    "children": [
+      {
+        "className": "io.jmix.dashboards.model.visualmodel.WidgetLayout",
+        "data": {
+          "widget": {
+            "id": "0f6f1109-4d5f-2218-e5f4-2d7cb926617b",
+            "showWidgetCaption": false,
+            "widgetId": "Clock",
+            "caption": "Clock",
+            "name": "Clock",
+            "description": null,
+            "parameters": [
+              {
+                "id": "532bfba8-aea6-5da6-54a0-f258610cfeed",
+                "name": "user",
+                "alias": "user",
+                "value": {
+                  "className": "io.jmix.dashboards.model.parameter.type.EntityParameterValue",
+                  "data": {
+                    "metaClassName": "sales_User",
+                    "entityId": "60885987-1b61-4247-94c7-dff348347f93",
+                    "fetchPlanName": "_base"
+                  }
+                }
+              }
+            ],
+            "widgetFields": [],
+            "fragmentId": "sales_ClockWidget",
+            "createdBy": "admin"
+          },
+          "id": "b18df219-4a2d-827f-b485-b7044d5dd0d9",
+          "children": [],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%"
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": null,
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%"
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 0,
+  "assistantBeanName": null
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenSerialchart.caption">
+    <layout>
+    <chart:serialChart id="lineChart" backgroundColor="WHITE">
+                       autoMarginOffset="20"
+                       categoryField="date"
+                       height="50%"
+                       marginRight="40"
+                       marginLeft="40"
+                       mouseWheelZoomEnabled="true"
+                       theme="LIGHT"
+                       width="50%">
+        <chart:data>
+            <chart:item>
+                <chart:property name="date" value="2011-03-02"/>
+                <chart:property name="value" value="5"/>
+            </chart:item>
+            <chart:item>
+                <chart:property name="date" value="2011-03-03"/>
+                <chart:property name="value" value="6"/>
+            </chart:item>
+            <chart:item>
+                <chart:property name="date" value="2011-03-04"/>
+                <chart:property name="value" value="3"/>
+            </chart:item>
+            <chart:item>
+                <chart:property name="date" value="2011-03-05"/>
+                <chart:property name="value" value="9"/>
+            </chart:item>
+            <chart:item>
+                <chart:property name="date" value="2011-03-06"/>
+                <chart:property name="value" value="5"/>
+            </chart:item>
+            <chart:item>
+                <chart:property name="date" value="2011-03-07"/>
+                <chart:property name="value" value="8"/>
+            </chart:item>
+            <chart:item>
+                <chart:property name="date" value="2011-03-09"/>
+                <chart:property name="value" value="9"/>
+            </chart:item>
+        </chart:data>
+        <chart:valueAxes>
+            <chart:axis id="v1"
+                        axisAlpha="0"
+                        ignoreAxisWidth="true"
+                        position="LEFT"/>
+        </chart:valueAxes>
+        <chart:balloon borderThickness="1"
+                       shadowAlpha="0"/>
+        <chart:graphs>
+            <chart:graph id="g1"
+                         bullet="ROUND"
+                         bulletBorderAlpha="1"
+                         bulletColor="WHITE"
+                         bulletSize="5"
+                         hideBulletsCount="50"
+                         lineThickness="2"
+                         title="Red line"
+                         useLineColorForBulletBorder="true"
+                         valueField="value">
+                <chart:balloon adjustBorderColor="false"
+                               color="WHITE"
+                               drop="true"/>
+            </chart:graph>
+        </chart:graphs>
+        <chart:categoryAxis dashLength="1"
+                            minorGridEnabled="true"/>
+        <chart:export/>
+    </chart:serialChart>
+
+
+
+
+
+    </layout>
+</window>

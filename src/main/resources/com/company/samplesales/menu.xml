@@ -10,6 +10,36 @@
               caption="msg://com.company.samplesales.screen.product/productBrowse.caption"/>
         <item screen="sales_NewEntity.browse"
               caption="msg://com.company.samplesales.screen.newentity/newEntityBrowse.menu"/>
+        <item screen="sales_BlankScreen" caption="msg://com.company.samplesales.blank/blankScreen.caption"/>
+        <item screen="sales_BlankScreenXychart"
+              caption="msg://com.company.samplesales.blankscreenxychart/blankScreenXychart.caption"/>
+        <item screen="sales_BlankScreenSerialchart"
+              caption="msg://com.company.samplesales.blankscreenserialchart/blankScreenSerialchart.caption"/>
+        <item screen="sales_BlankScreenPiechart"
+              caption="msg://com.company.samplesales.blank_screen_piechart/blankScreenPiechart.caption"/>
+        <item screen="sales_BlankScreenFunnelchart"
+              caption="msg://com.company.samplesales.blankscreenfunnelchart/blankScreenFunnelchart.caption"/>
+        <item screen="sales_BlankScreenAngularGaugechart"
+              caption="msg://com.company.samplesales.blankscreenangulargaugechart/blankScreenAngularGaugechart.caption"/>
+        <item screen="sales_BlankScreenRadarchart"
+              caption="msg://com.company.samplesales.blankscreenradarchart/blankScreenRadarchart.caption"/>
+        <item screen="sales_BlankScreenDashboard"
+              caption="msg://com.company.samplesales.screen.blankscreendashboard/blankScreenDashboard.caption"/>
+        <item screen="sales_BlankScreenStockchart"
+              caption="msg://com.company.samplesales.blankscreenstockchart/blankScreenStockchart.caption"/>
+        <item screen="sales_BlankScreenGanttchart"
+              caption="msg://com.company.samplesales.blankscreenganttchart/blankScreenGanttchart.caption"/>
+        <item screen="sales_BlankScreenDatabindingapi"
+              caption="msg://com.company.samplesales.blankscreendatabindingapi/blankScreenDatabindingapi.caption"/>
+        <item screen="sales_Diagramfromentity"
+              caption="msg://com.company.samplesales.diagramfromentity/diagramFromEntity.caption"/>
+        <item screen="sales_Diagramfromdataprovider"
+              caption="msg://com.company.samplesales.diagramfromdataprovider/diagramFromDataProvider.caption"/>
+        <item screen="sales_Chartsincrementalupdating"
+              caption="msg://com.company.samplesales.chartsincrementalupdating/chartsIncrementalUpdating.caption"/>
+        <item screen="sales_Diagramjson" caption="msg://com.company.samplesales.diagramjson/diagramjson.caption"/>
+        <item screen="sales_Creatingpivottable"
+              caption="msg://com.company.samplesales.creatingpivottable/creatingPivotTable.caption"/>
     </menu>
 
 </menu-config>

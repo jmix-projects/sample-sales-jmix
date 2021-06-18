@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://diagramjson.caption">
+    <layout>
+        <chart:serialChart id="serialChart">
+            <chart:nativeJson>
+                <![CDATA[
+        {
+            "titles": [
+                {
+                    "size": 15,
+                    "text": "Chart Title"
+                }
+            ]
+        }
+        ]]>
+            </chart:nativeJson>
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0" position="LEFT" title="Incidents"/>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph id="g1" bullet="ROUND" type="COLUMN" valueField="value"/>
+            </chart:graphs>
+            <chart:categoryAxis position="TOP" title="Time" labelsEnabled="false"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

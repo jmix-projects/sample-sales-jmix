@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"
+        caption="msg://blankScreenRadarchart.caption">
+    <layout>
+        <chart:radarChart id="radarChart"
+                          categoryField="country"
+                          height="50%"
+                          startDuration="2"
+                          theme="LIGHT"
+                          width="50%">
+            <chart:data>
+                <chart:item>
+                    <chart:property name="country" value="UK"/>
+                    <chart:property name="litres" value="5"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Belgium"/>
+                    <chart:property name="litres" value="10"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Swiss"/>
+                    <chart:property name="litres" value="15"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Ireland"/>
+                    <chart:property name="litres" value="20"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="England"/>
+                    <chart:property name="litres" value="35"/>
+                </chart:item>
+                <chart:item>
+                    <chart:property name="country" value="Russia"/>
+                    <chart:property name="litres" value="40"/>
+                </chart:item>
+            </chart:data>
+            <chart:graphs>
+                <chart:graph balloonText="[[value]] litres of beer per year"
+                             bullet="ROUND"
+                             valueField="litres"/>
+            </chart:graphs>
+            <chart:export/>
+        </chart:radarChart>
+    </layout>
+</window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <collection id="usersDc" class="com.company.samplesales.entity.User"/>
+        <instance id="userDc" class="com.company.samplesales.entity.User"/>
+    </data>
+    <layout height="100%"
+            spacing="true"
+            width="100%">
+        <vbox>
+            <hbox spacing="true">
+                <label id="clockField" stylename="huge"/>
+            </hbox>
+            <groupBox caption="msg://com.company.samplesales.screen.clock/user">
+                <form id="userForm" editable="false" dataContainer="userDc">
+                    <column>
+                        <textField property="username"/>
+                        <checkBox property="enabled"/>
+                        <textField property="email"/>
+                    </column>
+                </form>
+            </groupBox>
+        </vbox>
+
+    </layout>
+</fragment>
