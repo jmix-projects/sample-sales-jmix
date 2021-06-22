@@ -35,6 +35,7 @@
     <dialogMode height="600"
                 width="800"/>
     <layout spacing="true" expand="usersTable">
+
         <filter id="filter" dataLoader="usersDl">
             <properties include=".*"/>
         </filter>
@@ -42,7 +43,7 @@
                     width="100%"
                     dataContainer="usersDc"
                     multiselect="true"
-                    presentations="true">
+        >
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>

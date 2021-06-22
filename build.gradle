@@ -18,7 +18,14 @@ repositories {
     mavenCentral() 
     maven {
         url 'https://nexus.jmix.io/repository/public'
-    } 
+    }
+    maven {
+        url 'https://nexus.jmix.io/repository/premium'
+        credentials {
+            username rootProject['premiumRepoUser']
+            password rootProject['premiumRepoPass']
+        }
+    }
 }
 
 dependencies {
@@ -52,6 +59,9 @@ dependencies {
     implementation "io.jmix.ui:jmix-ui-themes"
     widgets "io.jmix.ui:jmix-pivot-table-widgets"
     implementation "io.jmix.ui:jmix-pivot-table-starter"
+    implementation "io.jmix.maps:jmix-maps-ui-starter"
+    widgets "io.jmix.maps:jmix-maps-ui-widgets"
+    implementation "io.jmix.maps:jmix-maps-starter"
 }
 
 test {

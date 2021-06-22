@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:maps="http://jmix.io/schema/maps/ui"
+        caption="msg://geoPointBrowse.caption"
+        focusComponent="geoPointsTable">
+    <data readOnly="true">
+        <collection id="geoPointsDc"
+                    class="com.company.samplesales.entity.GeoPoint">
+            <fetchPlan extends="_base"/>
+            <loader id="geoPointsDl">
+                <query>
+                    <![CDATA[select e from sales_GeoPoint e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="geoPointsTable" spacing="true">
+        <maps:geoMap id="map" height="400px" width="600px" centerX="-99.755859" centerY="39.164141" zoom="4">
+            <maps:layers selectedLayer="orderLayer">
+                <maps:tile id="tiles" tileProvider="map_OpenStreetMap"/>
+                <maps:vector id="orderLayer" dataContainer="geoPointsDc"/>
+                <maps:heatmap id="heatmapLayer" dataContainer="geoPointsDc"/>
+            </maps:layers>
+        </maps:geoMap>
+
+        <filter id="filter"
+                dataLoader="geoPointsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="geoPointsTable"
+                    width="100%"
+                    dataContainer="geoPointsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="date"/>
+                <column id="product"/>
+                <column id="amount"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="geoPointsTable.create"/>
+                <button id="editBtn" action="geoPointsTable.edit"/>
+                <button id="removeBtn" action="geoPointsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

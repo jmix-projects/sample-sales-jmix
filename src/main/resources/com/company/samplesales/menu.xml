@@ -40,6 +40,16 @@
         <item screen="sales_Diagramjson" caption="msg://com.company.samplesales.diagramjson/diagramjson.caption"/>
         <item screen="sales_Creatingpivottable"
               caption="msg://com.company.samplesales.creatingpivottable/creatingPivotTable.caption"/>
+        <item screen="sales_GeoPolyline.browse"
+              caption="msg://com.company.samplesales.screen.geopolyline/geoPolylineBrowse.menu"/>
+        <item screen="sales_GeoPolygon.browse"
+              caption="msg://com.company.samplesales.screen.geopolygon/geoPolygonBrowse.menu"/>
+        <item screen="sales_GeoPoint.browse"
+              caption="msg://com.company.samplesales.screen.geopoint/geoPointBrowse.menu"/>
+        <item screen="sales_WMSLayer.browse"
+              caption="msg://com.company.samplesales.screen.wmslayer/WMSLayerBrowse.menu"/>
+        <item screen="sales_ImageLayer.browse"
+              caption="msg://com.company.samplesales.screen.imagelayer/imageLayerBrowse.menu"/>
     </menu>
 
 </menu-config>

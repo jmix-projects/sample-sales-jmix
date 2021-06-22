@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:maps="http://jmix.io/schema/maps/ui"
+        caption="msg://imageLayerBrowse.caption"
+        focusComponent="imageLayersTable">
+    <data readOnly="true">
+        <collection id="imageLayersDc"
+                    class="com.company.samplesales.entity.ImageLayer">
+            <fetchPlan extends="_base"/>
+            <loader id="imageLayersDl">
+                <query>
+                    <![CDATA[select e from sales_ImageLayer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="imageLayersTable" spacing="true">
+        <maps:geoMap id="map" height="400px" width="600px" centerX="-99.755859" centerY = "39.164141" zoom="4">
+            <maps:layers selectedLayer="tileLayer">
+                <maps:tile id="tileLayer" tileProvider="map_OpenStreetMap"/>
+                <maps:image id="imageLayer"
+                            image="url:https://legacy.lib.utexas.edu/maps/historical/ward_1912/ottoman_advance_1451.jpg"
+                            topLeftX="-116.982422"
+                             topLeftY ="48.899394"
+                            bottomRightY="-104.326172"
+                             bottomRightX = "42.656586"
+                            opacity="0.5"/>
+            </maps:layers>
+        </maps:geoMap>
+
+        <filter id="filter"
+                dataLoader="imageLayersDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="imageLayersTable"
+                    width="100%"
+                    dataContainer="imageLayersDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="testImageField"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="imageLayersTable.create"/>
+                <button id="editBtn" action="imageLayersTable.edit"/>
+                <button id="removeBtn" action="imageLayersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
