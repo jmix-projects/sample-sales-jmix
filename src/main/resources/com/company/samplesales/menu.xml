@@ -50,6 +50,7 @@
               caption="msg://com.company.samplesales.screen.wmslayer/WMSLayerBrowse.menu"/>
         <item screen="sales_ImageLayer.browse"
               caption="msg://com.company.samplesales.screen.imagelayer/imageLayerBrowse.menu"/>
+        <item screen="sales_Order.browse2" caption="msg://com.company.samplesales.screen.order/orderBrowse2.menu"/>
     </menu>
 
 </menu-config>

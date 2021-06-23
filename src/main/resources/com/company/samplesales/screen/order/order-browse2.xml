@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://jmix.io/schema/ui/window"
         xmlns:c="http://jmix.io/schema/ui/jpql-condition"
-        caption="msg://newEntityBrowse.caption"
-        focusComponent="newEntitiesTable">
+        caption="msg://orderBrowse2.caption"
+        focusComponent="ordersTable">
     <data readOnly="true">
-        <collection id="newEntitiesDc"
-                    class="com.company.samplesales.entity.NewEntity">
+        <collection id="ordersDc"
+                    class="com.company.samplesales.entity.Order">
             <fetchPlan extends="_base"/>
-            <loader id="newEntitiesDl">
+            <loader id="ordersDl">
                 <query>
-                    <![CDATA[select e from sales_NewEntity e]]>
+                    <![CDATA[select e from sales_Order e]]>
                 </query>
             </loader>
         </collection>
@@ -30,36 +30,40 @@
     </actions>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="newEntitiesTable" spacing="true">
+    <layout expand="ordersTable" spacing="true">
         <filter id="filter"
-                dataLoader="newEntitiesDl">
+                dataLoader="ordersDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="newEntitiesTable"
+        <groupTable id="ordersTable"
                     width="100%"
-                    dataContainer="newEntitiesDc">
+                    dataContainer="ordersDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="excelExport" type="excelExport"/>
+                <action id="jsonExport" type="jsonExport"/>
             </actions>
             <columns>
-                <column id="file"/>
+                <column id="orderNumber"/>
+                <column id="numberOfSpecialProducts"/>
+                <column id="amount"/>
+                <column id="date"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <fileUpload/>
-                <fileMultiUpload id="fileMultiUpload" caption="MultiUpload"/>
-                <button id="createBtn" action="newEntitiesTable.create"/>
-                <button id="editBtn" action="newEntitiesTable.edit"/>
-                <button id="removeBtn" action="newEntitiesTable.remove"/>
+                <button id="createBtn" action="ordersTable.create"/>
+                <button id="editBtn" action="ordersTable.edit"/>
+                <button id="removeBtn" action="ordersTable.remove"/>
+                <button id="excelExport" action="ordersTable.excelExport"/>
+                <button id="jsonExport" action="ordersTable.jsonExport"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
             <button action="lookupSelectAction"/>
             <button action="lookupCancelAction"/>
         </hbox>
-        <table height="100px" width="200px"/>
     </layout>
 </window>
