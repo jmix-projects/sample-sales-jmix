@@ -51,6 +51,7 @@
         <item screen="sales_ImageLayer.browse"
               caption="msg://com.company.samplesales.screen.imagelayer/imageLayerBrowse.menu"/>
         <item screen="sales_Order.browse2" caption="msg://com.company.samplesales.screen.order/orderBrowse2.menu"/>
+        <item screen="sales_Person.browse" caption="msg://com.company.samplesales.screen.person/personBrowse.menu"/>
     </menu>
 
 </menu-config>

@@ -63,6 +63,8 @@ dependencies {
     widgets "io.jmix.maps:jmix-maps-ui-widgets"
     implementation "io.jmix.maps:jmix-maps-starter"
     implementation "io.jmix.ui:jmix-ui-export-starter"
+    implementation "io.jmix.bpm:jmix-bpm-starter"
+    implementation "io.jmix.bpm:jmix-bpm-ui-starter"
 }
 
 test {
