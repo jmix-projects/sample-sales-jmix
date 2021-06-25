@@ -67,6 +67,9 @@ dependencies {
     implementation "io.jmix.bpm:jmix-bpm-ui-starter"
     implementation "io.jmix.dynattr:jmix-dynattr-starter"
     implementation "io.jmix.dynattr:jmix-dynattr-ui-starter"
+    implementation 'io.jmix.search:jmix-search-starter'
+    implementation 'io.jmix.search:jmix-search-ui-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
 }
 
 test {

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
+        xmlns:search="http://jmix.io/schema/search/ui"
+        xmlns:dynattr="http://jmix.io/schema/dynattr/ui"
+        caption="msg://searchPersonBrowse.caption"
+        focusComponent="searchPersonsTable">
+    <data readOnly="true">
+        <collection id="searchPersonsDc"
+                    class="com.company.samplesales.entity.SearchPerson">
+            <fetchPlan extends="_base"/>
+            <loader id="searchPersonsDl">
+                <query>
+                    <![CDATA[select e from sales_SearchPerson e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <dynattr:dynamicAttributes/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="lookupSelectAction"
+                caption="msg:///actions.Select"
+                icon="LOOKUP_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="lookupCancelAction"
+                caption="msg:///actions.Cancel"
+                icon="LOOKUP_CANCEL"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="searchPersonsTable" spacing="true">
+        <search:searchField id="search" caption="search"/>
+        <filter id="filter"
+                dataLoader="searchPersonsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="searchPersonsTable"
+                    width="100%"
+                    dataContainer="searchPersonsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="description"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="searchPersonsTable.create"/>
+                <button id="editBtn" action="searchPersonsTable.edit"/>
+                <button id="removeBtn" action="searchPersonsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

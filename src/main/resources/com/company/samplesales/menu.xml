@@ -54,6 +54,8 @@
         <item screen="sales_Person.browse" caption="msg://com.company.samplesales.screen.person/personBrowse.menu"/>
         <item screen="sales_DynamicAttrPerson.browse"
               caption="msg://com.company.samplesales.screen.dynamicattrperson/dynamicAttrPersonBrowse.menu"/>
+        <item screen="sales_SearchPerson.browse"
+              caption="msg://com.company.samplesales.screen.searchperson/searchPersonBrowse.menu"/>
     </menu>
 
 </menu-config>
