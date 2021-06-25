@@ -65,6 +65,8 @@ dependencies {
     implementation "io.jmix.ui:jmix-ui-export-starter"
     implementation "io.jmix.bpm:jmix-bpm-starter"
     implementation "io.jmix.bpm:jmix-bpm-ui-starter"
+    implementation "io.jmix.dynattr:jmix-dynattr-starter"
+    implementation "io.jmix.dynattr:jmix-dynattr-ui-starter"
 }
 
 test {
