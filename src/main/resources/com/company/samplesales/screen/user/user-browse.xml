@@ -42,7 +42,7 @@
                     width="100%"
                     dataContainer="usersDc"
                     multiselect="true"
-                    presentations="true">
+                    >
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
