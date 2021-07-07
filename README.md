@@ -16,7 +16,7 @@ The application project covers the following aspects:
   - Visual editing of the existing screens
 - Creating Integration Tests
 
-Based on Jmix Framework 0.3.1
+Based on Jmix Framework 1.0.0
 
 # Issues
 Please use https://www.cuba-platform.com/discuss/c/jmix/40 for discussion, support and reporting problems corresponding to this sample.
