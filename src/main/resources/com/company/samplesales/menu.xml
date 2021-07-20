@@ -21,14 +21,14 @@
         <item screen="sales_BlankScreen"
               caption="msg://com.company.samplesales.screen.charts.blank/blankScreen.caption"/>
         <item screen="sales_BlankScreenDatabindingapi"
-              caption="msg://com.company.samplesales.blankscreendatabindingapi/blankScreenDatabindingapi.caption"/>
+              caption="msg://com.company.samplesales.screen.charts.blankscreendatabindingapi/blankScreenDatabindingapi.caption"/>
         <item screen="sales_Diagramfromentity"
-              caption="msg://com.company.samplesales.diagramfromentity/diagramFromEntity.caption"/>
+              caption="msg://com.company.samplesales.screen.charts.diagramfromentity/diagramFromEntity.caption"/>
         <item screen="sales_Diagramfromdataprovider"
-              caption="msg://com.company.samplesales.diagramfromdataprovider/diagramFromDataProvider.caption"/>
+              caption="msg://com.company.samplesales.screen.charts.diagramfromdataprovider/diagramFromDataProvider.caption"/>
         <item screen="sales_Chartsincrementalupdating"
-              caption="msg://com.company.samplesales.chartsincrementalupdating/chartsIncrementalUpdating.caption"/>
-        <item screen="sales_Diagramjson" caption="msg://com.company.samplesales.diagramjson/diagramjson.caption"/>
+              caption="msg://com.company.samplesales.screen.charts.chartsincrementalupdating/chartsIncrementalUpdating.caption"/>
+        <item screen="sales_Diagramjson" caption="msg://com.company.samplesales.screen.charts.diagramjson/diagramjson.caption"/>
     </menu>
     <menu id="maps" caption="msg://com.company.samplesales/menu_config.maps" insertAfter="charts">
         <item screen="sales_GeoPoint.browse"
@@ -42,7 +42,7 @@
         <item screen="sales_ImageLayer.browse"
               caption="msg://com.company.samplesales.screen.maps.imagelayer/imageLayerBrowse.menu"/>
     </menu>
-    <menu id="addonsScreens" caption="msg://com.company.samplesales/menu_config.addonsScreens">
+    <menu id="addonsScreens" caption="msg://com.company.samplesales/menu_config.addonsScreens" insertAfter="maps">
         <item screen="sales_Creatingpivottable"
               caption="msg://com.company.samplesales.creatingpivottable/creatingPivotTable.caption"/>
         <item screen="sales_SearchPerson.browse"
@@ -53,6 +53,7 @@
               caption="msg://com.company.samplesales.screen.dynamicattrperson/dynamicAttrPersonBrowse.menu"/>
         <item screen="sales_BlankScreenDashboard"
               caption="msg://com.company.samplesales.screen.blankscreendashboard/blankScreenDashboard.caption"/>
+        <item screen="sales_Order.browse2" caption="msg://com.company.samplesales.screen.order/orderBrowse2.menu"/>
     </menu>
     <menu id="application" caption="msg://com.company.samplesales/menu.application" insertBefore="administration">
         <item screen="sales_User.browse" caption="msg://com.company.samplesales.screen.user/UserBrowse.caption"/>
@@ -61,7 +62,6 @@
         <item screen="sales_Order.browse" caption="msg://com.company.samplesales.screen.order/orderBrowse.caption"/>
         <item screen="sales_Product.browse"
               caption="msg://com.company.samplesales.screen.product/productBrowse.caption"/>
-        <item screen="sales_Order.browse2" caption="msg://com.company.samplesales.screen.order/orderBrowse2.menu"/>
         <item screen="sales_Person.browse" caption="msg://com.company.samplesales.screen.person/personBrowse.menu"/>
     </menu>
 </menu-config>
