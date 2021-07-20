@@ -1,6 +1,6 @@
 package com.company.samplesales.app;
 
-import com.company.samplesales.clockwidget.ClockWidget;
+import com.company.samplesales.screen.clockwidget.ClockWidget;
 import io.jmix.dashboardsui.component.Dashboard;
 import io.jmix.dashboardsui.dashboard.assistant.DashboardViewAssistant;
 import io.jmix.dashboardsui.event.DashboardUpdatedEvent;
