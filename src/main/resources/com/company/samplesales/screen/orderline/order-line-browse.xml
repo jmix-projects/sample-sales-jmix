@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://jmix.io/schema/ui/window"
         xmlns:c="http://jmix.io/schema/ui/jpql-condition"
-        caption="msg://customerBrowse.caption"
-        focusComponent="customersTable">
+        caption="msg://orderLineBrowse.caption"
+        focusComponent="orderLinesTable">
     <data readOnly="true">
-        <collection id="customersDc"
-                    class="com.company.samplesales.entity.Customer">
-            <fetchPlan extends="_local"/>
-            <loader id="customersDl">
+        <collection id="orderLinesDc"
+                    class="com.company.samplesales.entity.OrderLine">
+            <fetchPlan extends="_base">
+                <property name="product" fetchPlan="_base"/>
+                <property name="order" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="orderLinesDl">
                 <query>
-                    <![CDATA[select e from sales_Customer e]]>
+                    <![CDATA[select e from sales_OrderLine e]]>
                 </query>
             </loader>
         </collection>
@@ -30,33 +33,30 @@
     </actions>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="customersTable" spacing="true">
+    <layout expand="orderLinesTable" spacing="true">
         <filter id="filter"
-                dataLoader="customersDl">
+                dataLoader="orderLinesDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="customersTable"
+        <groupTable id="orderLinesTable"
                     width="100%"
-                    dataContainer="customersDc">
+                    dataContainer="orderLinesDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
-                <action id="showEntityInfo" type="showEntityInfo"/>
-                <action id="listPrintForm" type="listPrintForm" />
             </actions>
             <columns>
-                <column id="name"/>
-                <column id="email"/>
-                <column id="grade"/>
+                <column id="quantity"/>
+                <column id="product"/>
+                <column id="order"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="customersTable.create"/>
-                <button id="editBtn" action="customersTable.edit"/>
-                <button id="removeBtn" action="customersTable.remove"/>
-                <button id="printBtn" action="customersTable.listPrintForm"/>
+                <button id="createBtn" action="orderLinesTable.create"/>
+                <button id="editBtn" action="orderLinesTable.edit"/>
+                <button id="removeBtn" action="orderLinesTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
