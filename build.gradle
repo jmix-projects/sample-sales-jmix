@@ -83,6 +83,9 @@ dependencies {
     implementation "io.jmix.ui:jmix-charts-starter"
     implementation "io.jmix.ui:jmix-pivot-table-starter"
     widgets "io.jmix.ui:jmix-pivot-table-widgets"
+    implementation "io.jmix.audit:jmix-audit-starter"
+    implementation "io.jmix.audit:jmix-audit-ui-starter"
+    implementation 'io.jmix.sessions:jmix-sessions-starter'
 }
 
 test {
