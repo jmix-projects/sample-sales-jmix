@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:et="http://jmix.io/schema/grapesjs/ui"
+        caption="msg://grapesjs.caption">
+    <layout>
+        <et:grapesJsWebpageHtmlEditor id="htmlEditor">
+            <et:disabledBlocks>
+                map,tabs
+            </et:disabledBlocks>
+        </et:grapesJsWebpageHtmlEditor>
+    </layout>
+</window>

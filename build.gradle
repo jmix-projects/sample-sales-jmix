@@ -87,6 +87,7 @@ dependencies {
     implementation "io.jmix.audit:jmix-audit-ui-starter"
     implementation 'io.jmix.sessions:jmix-sessions-starter'
     implementation "io.jmix.translations:jmix-translations-ru"
+    implementation "io.jmix.grapesjs:jmix-grapesjs-starter"
 }
 
 test {
