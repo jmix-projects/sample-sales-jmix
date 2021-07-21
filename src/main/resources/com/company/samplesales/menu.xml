@@ -55,6 +55,8 @@
               caption="msg://com.company.samplesales.screen.blankscreendashboard/blankScreenDashboard.caption"/>
         <item screen="sales_Order.browse2" caption="msg://com.company.samplesales.screen.order/orderBrowse2.menu"/>
         <item screen="sales_Grapesjs" caption="msg://com.company.samplesales.screen.grapesjs/grapesjs.caption"/>
+        <item screen="sales_EmailSending"
+              caption="msg://com.company.samplesales.screen.emailsending/emailSending.caption"/>
     </menu>
     <menu id="application" caption="msg://com.company.samplesales/menu.application" insertBefore="administration">
         <item screen="sales_User.browse" caption="msg://com.company.samplesales.screen.user/UserBrowse.caption"/>

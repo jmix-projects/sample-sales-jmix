@@ -88,6 +88,8 @@ dependencies {
     implementation 'io.jmix.sessions:jmix-sessions-starter'
     implementation "io.jmix.translations:jmix-translations-ru"
     implementation "io.jmix.grapesjs:jmix-grapesjs-starter"
+    implementation "io.jmix.email:jmix-email-starter"
+    implementation "io.jmix.email:jmix-email-ui-starter"
 }
 
 test {
