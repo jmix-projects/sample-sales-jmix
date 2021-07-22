@@ -47,8 +47,6 @@
               caption="msg://com.company.samplesales.creatingpivottable/creatingPivotTable.caption"/>
         <item screen="sales_SearchPerson.browse"
               caption="msg://com.company.samplesales.screen.searchperson/searchPersonBrowse.menu"/>
-        <item screen="sales_NewEntity.browse"
-              caption="msg://com.company.samplesales.screen.newentity/newEntityBrowse.menu"/>
         <item screen="sales_DynamicAttrPerson.browse"
               caption="msg://com.company.samplesales.screen.dynamicattrperson/dynamicAttrPersonBrowse.menu"/>
         <item screen="sales_BlankScreenDashboard"
@@ -57,6 +55,8 @@
         <item screen="sales_Grapesjs" caption="msg://com.company.samplesales.screen.grapesjs/grapesjs.caption"/>
         <item screen="sales_EmailSending"
               caption="msg://com.company.samplesales.screen.emailsending/emailSending.caption"/>
+        <item screen="sales_EntityWithFile.browse"
+              caption="msg://com.company.samplesales.screen.entitywithfile/entityWithFileBrowse.menu"/>
     </menu>
     <menu id="application" caption="msg://com.company.samplesales/menu.application" insertBefore="administration">
         <item screen="sales_User.browse" caption="msg://com.company.samplesales.screen.user/UserBrowse.caption"/>

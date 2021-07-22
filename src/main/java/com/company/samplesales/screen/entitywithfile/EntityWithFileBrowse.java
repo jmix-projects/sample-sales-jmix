@@ -1,20 +1,20 @@
-package com.company.samplesales.screen.newentity;
+package com.company.samplesales.screen.entitywithfile;
 
 import io.jmix.core.FileRef;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.component.FileMultiUploadField;
 import io.jmix.ui.screen.*;
-import com.company.samplesales.entity.NewEntity;
+import com.company.samplesales.entity.EntityWithFile;
 import io.jmix.ui.upload.TemporaryStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 import java.util.UUID;
 
-@UiController("sales_NewEntity.browse")
-@UiDescriptor("new-entity-browse.xml")
-@LookupComponent("newEntitiesTable")
-public class NewEntityBrowse extends StandardLookup<NewEntity> {
+@UiController("sales_EntityWithFile.browse")
+@UiDescriptor("entity-with-file-browse.xml")
+@LookupComponent("entityWithFilesTable")
+public class EntityWithFileBrowse extends StandardLookup<EntityWithFile> {
     @Autowired
     private FileMultiUploadField fileMultiUpload;
     @Autowired

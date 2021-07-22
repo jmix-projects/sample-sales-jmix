@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://jmix.io/schema/ui/window"
-        xmlns:c="http://jmix.io/schema/ui/jpql-condition"
-        caption="msg://newEntityBrowse.caption"
-        focusComponent="newEntitiesTable">
+        caption="msg://entityWithFileBrowse.caption"
+        focusComponent="entityWithFilesTable">
     <data readOnly="true">
-        <collection id="newEntitiesDc"
-                    class="com.company.samplesales.entity.NewEntity">
+        <collection id="entityWithFilesDc"
+                    class="com.company.samplesales.entity.EntityWithFile">
             <fetchPlan extends="_base"/>
-            <loader id="newEntitiesDl">
+            <loader id="entityWithFilesDl">
                 <query>
-                    <![CDATA[select e from sales_NewEntity e]]>
+                    <![CDATA[select e from sales_EntityWithFile e]]>
                 </query>
             </loader>
         </collection>
@@ -30,14 +29,14 @@
     </actions>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="newEntitiesTable" spacing="true">
+    <layout expand="entityWithFilesTable" spacing="true">
         <filter id="filter"
-                dataLoader="newEntitiesDl">
+                dataLoader="entityWithFilesDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="newEntitiesTable"
+        <groupTable id="entityWithFilesTable"
                     width="100%"
-                    dataContainer="newEntitiesDc">
+                    dataContainer="entityWithFilesDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
@@ -51,9 +50,9 @@
                           alwaysVisible="true">
                 <fileUpload/>
                 <fileMultiUpload id="fileMultiUpload" caption="MultiUpload"/>
-                <button id="createBtn" action="newEntitiesTable.create"/>
-                <button id="editBtn" action="newEntitiesTable.edit"/>
-                <button id="removeBtn" action="newEntitiesTable.remove"/>
+                <button id="createBtn" action="entityWithFilesTable.create"/>
+                <button id="editBtn" action="entityWithFilesTable.edit"/>
+                <button id="removeBtn" action="entityWithFilesTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

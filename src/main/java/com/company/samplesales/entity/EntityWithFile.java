@@ -11,9 +11,9 @@ import javax.persistence.Table;
 import java.util.UUID;
 
 @JmixEntity
-@Table(name = "SALES_NEW_ENTITY")
-@Entity(name = "sales_NewEntity")
-public class NewEntity {
+@Table(name = "SALES_ENTITY_WITH_FILE")
+@Entity(name = "sales_EntityWithFile")
+public class EntityWithFile {
     @JmixGeneratedValue
     @Column(name = "ID", nullable = false)
     @Id
