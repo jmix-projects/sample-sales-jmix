@@ -90,6 +90,8 @@ dependencies {
     implementation "io.jmix.grapesjs:jmix-grapesjs-starter"
     implementation "io.jmix.email:jmix-email-starter"
     implementation "io.jmix.email:jmix-email-ui-starter"
+    implementation "io.jmix.imap:jmix-imap-ui-starter"
+    implementation "io.jmix.imap:jmix-imap-starter"
 }
 
 test {

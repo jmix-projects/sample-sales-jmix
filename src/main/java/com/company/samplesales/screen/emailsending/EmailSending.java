@@ -19,7 +19,7 @@ public class EmailSending extends Screen {
 
     @Subscribe("sendEmail")
     public void onSendEmailClick(Button.ClickEvent event) throws EmailException {
-        EmailInfo emailInfo = EmailInfoBuilder.create("testaddress",
+        EmailInfo emailInfo = EmailInfoBuilder.create("sample_username@haulmont.com",
                 "Email subject", "Email body")
                 .build();
         emailer.sendEmail(emailInfo);
