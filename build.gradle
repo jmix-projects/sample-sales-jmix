@@ -92,6 +92,7 @@ dependencies {
     implementation "io.jmix.email:jmix-email-ui-starter"
     implementation "io.jmix.imap:jmix-imap-ui-starter"
     implementation "io.jmix.imap:jmix-imap-starter"
+    implementation 'io.jmix.cuba:jmix-cuba-starter'
 }
 
 test {
