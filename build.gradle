@@ -95,6 +95,8 @@ dependencies {
     implementation 'io.jmix.cuba:jmix-cuba-starter'
     implementation "io.jmix.multitenancy:jmix-multitenancy-ui-starter"
     implementation "io.jmix.multitenancy:jmix-multitenancy-starter"
+    implementation "io.jmix.graphql:jmix-graphql-starter"
+
 }
 
 test {
