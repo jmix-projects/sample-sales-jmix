@@ -30,6 +30,7 @@
                 <textField id="nameField" property="name"/>
                 <textField id="priceField" property="price"/>
                 <checkBox id="specialField" property="special"/>
+                <fileStorageUpload id="photoField" property="photo"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

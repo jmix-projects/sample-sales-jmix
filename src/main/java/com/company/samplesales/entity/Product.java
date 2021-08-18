@@ -1,5 +1,6 @@
 package com.company.samplesales.entity;
 
+import io.jmix.core.FileRef;
 import io.jmix.core.annotation.DeletedBy;
 import io.jmix.core.annotation.DeletedDate;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
@@ -24,6 +25,9 @@ public class Product {
     @Column(name = "ID", nullable = false)
     @Id
     private UUID id;
+
+    @Column(name = "PHOTO")
+    private FileRef photo;
 
     @Column(name = "SPECIAL")
     private Boolean special;
@@ -67,6 +71,14 @@ public class Product {
     @Column(name = "DELETED_DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date deletedDate;
+
+    public FileRef getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(FileRef photo) {
+        this.photo = photo;
+    }
 
     public Date getDeletedDate() {
         return deletedDate;
