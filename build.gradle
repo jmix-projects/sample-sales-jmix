@@ -93,6 +93,8 @@ dependencies {
     implementation "io.jmix.imap:jmix-imap-ui-starter"
     implementation "io.jmix.imap:jmix-imap-starter"
     implementation 'io.jmix.cuba:jmix-cuba-starter'
+    implementation "io.jmix.multitenancy:jmix-multitenancy-ui-starter"
+    implementation "io.jmix.multitenancy:jmix-multitenancy-starter"
 }
 
 test {
