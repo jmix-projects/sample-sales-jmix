@@ -9,7 +9,7 @@
     </data>
     <facets>
         <dataLoadCoordinator auto="true"/>
-        <timer id="updateChartTimer" delay="2" onTimer="updateChart" repeating="true" autostart="true"/>
+        <timer id="updateChartTimer" delay="1000" repeating="true" autostart="true"/>
     </facets>
     <layout>
         <chart:serialChart id="orderHistoryChart"

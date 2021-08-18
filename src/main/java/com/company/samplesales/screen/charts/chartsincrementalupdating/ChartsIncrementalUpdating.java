@@ -27,8 +27,8 @@ public class ChartsIncrementalUpdating extends Screen {
     @Autowired
     private TimeSource timeSource;
 
-    private Random random = new Random(42);
-    private Queue<ChartsOrder> itemsQueue = new LinkedList<>();
+    private final Random random = new Random(42);
+    private final Queue<ChartsOrder> itemsQueue = new LinkedList<>();
 
 
     @Subscribe
@@ -41,7 +41,8 @@ public class ChartsIncrementalUpdating extends Screen {
 
     }
 
-    public void updateChart(Timer source) {
+    @Subscribe("updateChartTimer")
+    public void onUpdateChartTimerTimerAction(Timer.TimerActionEvent event) {
         ChartsOrder orderHistory = metadata.create(ChartsOrder.class);
         orderHistory.setAmount(new BigDecimal(random.nextInt(1000) + 100));
         orderHistory.setDate(timeSource.currentTimestamp());;
@@ -51,7 +52,7 @@ public class ChartsIncrementalUpdating extends Screen {
 
         if (itemsQueue.size() > 10) {
             ChartsOrder item = itemsQueue.poll();
-            ordersDc.getMutableItems().add(item);
+            ordersDc.getMutableItems().remove(item);
         }
         getScreenData().loadAll();
     }
