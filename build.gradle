@@ -96,6 +96,7 @@ dependencies {
     implementation "io.jmix.multitenancy:jmix-multitenancy-ui-starter"
     implementation "io.jmix.multitenancy:jmix-multitenancy-starter"
     implementation "io.jmix.graphql:jmix-graphql-starter"
+    runtimeOnly "com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.1"
 
 }
 
