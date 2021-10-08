@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
-        class="com.company.samplesales.screen.cuba.CubaScreen"
-        caption="msg://cubaScreen.caption">
-    <layout>
-        <label id="label" value="This is legacy CUBA screen based on com.haulmont.cuba.gui.components.AbstractWindow"/>
-    </layout>
-</window>

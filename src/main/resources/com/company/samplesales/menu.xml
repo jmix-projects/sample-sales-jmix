@@ -58,9 +58,6 @@
         <item screen="sales_EntityWithFile.browse"
               caption="msg://com.company.samplesales.screen.entitywithfile/entityWithFileBrowse.menu"/>
     </menu>
-    <menu id="cubaScreens" caption="msg://com.company.samplesales/menu_config.cubaScreens" insertAfter="addonsScreens">
-        <item screen="sales_CubaScreen" caption="msg://com.company.samplesales.screen.cuba/cubaScreen.caption"/>
-    </menu>
     <menu id="application" caption="msg://com.company.samplesales/menu.application" insertBefore="administration">
         <item screen="sales_User.browse" caption="msg://com.company.samplesales.screen.user/UserBrowse.caption"/>
         <item screen="sales_Customer.browse"
