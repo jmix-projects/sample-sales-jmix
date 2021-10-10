@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JmixDataStoreSettingsManager">
     <moduleSettings>
-      <entry key="simple-sales-jmix.main">
+      <entry key="sample-sales-jmix.main">
         <ModuleSettings>
           <option name="dataStoreOptions">
             <map>
@@ -16,5 +16,8 @@
         </ModuleSettings>
       </entry>
     </moduleSettings>
+  </component>
+  <component name="JmixLiquibaseChangesConfig">
+    <exclude-change idName="PERSISTENT_LOGINS" tagName="dropTable" />
   </component>
 </project>
