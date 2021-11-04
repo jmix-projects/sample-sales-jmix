@@ -2,7 +2,6 @@
 <menu-config xmlns="http://jmix.io/schema/ui/menu">
 
     <menu id="application" caption="msg://com.company.samplesales/menu.application" insertBefore="administration">
-        <item screen="sales_User.browse" caption="msg://com.company.samplesales.screen.user/UserBrowse.caption"/>
         <item screen="sales_Customer.browse"
               caption="msg://com.company.samplesales.screen.customer/customerBrowse.caption"/>
         <item screen="sales_Order.browse" caption="msg://com.company.samplesales.screen.order/orderBrowse.caption"/>
