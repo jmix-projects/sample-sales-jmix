@@ -1,12 +1,12 @@
 plugins {
-    id 'io.jmix' version '1.0.0'
+    id 'io.jmix' version '1.1.0'
     id 'java'
 }
 
 apply plugin: 'org.springframework.boot'
 
 jmix {
-    bomVersion = '1.0.3'
+    bomVersion = '1.1.0'
     projectId = 'sales'
 }
 
@@ -15,10 +15,10 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenCentral() 
+    mavenCentral()
     maven {
         url 'https://global.repo.jmix.io/repository/public'
-    } 
+    }
 }
 
 dependencies {
@@ -44,6 +44,8 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    implementation("io.jmix.audit:jmix-audit-starter")
+    implementation("io.jmix.audit:jmix-audit-ui-starter")
 }
 
 test {
