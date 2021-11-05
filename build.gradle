@@ -46,6 +46,10 @@ dependencies {
     }
     implementation("io.jmix.audit:jmix-audit-starter")
     implementation("io.jmix.audit:jmix-audit-ui-starter")
+
+    implementation 'org.springframework.security:spring-security-oauth2-client'
+    implementation 'org.springframework.security:spring-security-oauth2-jose'
+    implementation 'org.springframework.security:spring-security-oauth2-resource-server'
 }
 
 test {
