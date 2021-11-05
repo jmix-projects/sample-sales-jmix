@@ -1,17 +1,21 @@
 package com.company.samplesales.entity;
 
+import com.company.samplesales.keycloak.user.JmixOidcUser;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.entity.annotation.SystemLevel;
 import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
-import io.jmix.security.authentication.JmixUserDetails;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.oauth2.core.oidc.OidcIdToken;
+import org.springframework.security.oauth2.core.oidc.OidcUserInfo;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Map;
 import java.util.UUID;
 
 @JmixEntity
@@ -19,7 +23,7 @@ import java.util.UUID;
 @Table(name = "SALES_USER", indexes = {
         @Index(name = "IDX_SALES_USER_ON_USERNAME", columnList = "USERNAME", unique = true)
 })
-public class User implements JmixUserDetails {
+public class User implements JmixOidcUser {
 
     @Id
     @Column(name = "ID", nullable = false)
@@ -50,8 +54,22 @@ public class User implements JmixUserDetails {
     @Column(name = "ENABLED")
     protected Boolean enabled = true;
 
+    @Column(name = "PHONE_NUMBER")
+    private String telephoneNumber;
+
     @Transient
     protected Collection<? extends GrantedAuthority> authorities;
+
+    @Transient
+    protected OidcUser delegate;
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(String phoneNumber) {
+        this.telephoneNumber = phoneNumber;
+    }
 
     public UUID getId() {
         return id;
@@ -153,5 +171,38 @@ public class User implements JmixUserDetails {
     public String getDisplayName() {
         return String.format("%s %s [%s]", (firstName != null ? firstName : ""),
                 (lastName != null ? lastName : ""), username).trim();
+    }
+
+    public OidcUser getDelegate() {
+        return delegate;
+    }
+
+    public void setDelegate(OidcUser delegate) {
+        this.delegate = delegate;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return delegate.getAttributes();
+    }
+
+    @Override
+    public Map<String, Object> getClaims() {
+        return delegate.getClaims();
+    }
+
+    @Override
+    public OidcUserInfo getUserInfo() {
+        return delegate != null ? delegate.getUserInfo() : null;
+    }
+
+    @Override
+    public OidcIdToken getIdToken() {
+        return delegate != null ? delegate.getIdToken() : null;
+    }
+
+    @Override
+    public String getName() {
+        return delegate.getName();
     }
 }

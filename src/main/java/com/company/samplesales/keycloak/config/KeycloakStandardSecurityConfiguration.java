@@ -1,6 +1,7 @@
 package com.company.samplesales.keycloak.config;
 
-import com.company.samplesales.keycloak.user.OidcUserDetails;
+import com.company.samplesales.keycloak.sync.UserSynchronization;
+import com.company.samplesales.keycloak.user.JmixOidcUser;
 import io.jmix.security.StandardSecurityConfiguration;
 import io.jmix.security.role.ResourceRoleRepository;
 import org.springframework.context.annotation.Configuration;
@@ -30,15 +31,18 @@ public class KeycloakStandardSecurityConfiguration extends StandardSecurityConfi
     protected final ResourceRoleRepository resourceRoleRepository;
     protected final ClientRegistrationRepository clientRegistrationRepository;
     protected final KeycloakRolesMapper keycloakRolesMapper;
+    protected final UserSynchronization userSynchronization;
 
     public KeycloakStandardSecurityConfiguration(KeycloakProperties keycloakProperties,
                                                  ResourceRoleRepository resourceRoleRepository,
                                                  ClientRegistrationRepository clientRegistrationRepository,
-                                                 KeycloakRolesMapper keycloakRolesMapper) {
+                                                 KeycloakRolesMapper keycloakRolesMapper,
+                                                 UserSynchronization userSynchronization) {
         this.keycloakProperties = keycloakProperties;
         this.resourceRoleRepository = resourceRoleRepository;
         this.clientRegistrationRepository = clientRegistrationRepository;
         this.keycloakRolesMapper = keycloakRolesMapper;
+        this.userSynchronization = userSynchronization;
     }
 
     protected OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler() {
@@ -66,8 +70,11 @@ public class KeycloakStandardSecurityConfiguration extends StandardSecurityConfi
         OidcUserService delegate = new OidcUserService();
         return userRequest -> {
             OidcUser user = delegate.loadUser(userRequest);
-            // todo "given_name", "family_name", "email", "sub"
-            return new OidcUserDetails(getUserAuthorities(user), user.getIdToken(), user.getUserInfo());
+
+            Collection<? extends GrantedAuthority> userAuthorities = getUserAuthorities(user);
+            JmixOidcUser jmixUser = userSynchronization.synchronizeUserDetails(user, userAuthorities);
+            return jmixUser;
+            //return new OidcUserDetails(getUserAuthorities(user), user.getIdToken(), user.getUserInfo());
         };
     }
 

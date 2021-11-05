@@ -11,6 +11,7 @@
                 <property name="lastName"/>
                 <property name="email"/>
                 <property name="enabled"/>
+                <property name="telephoneNumber"/>
             </fetchPlan>
             <loader id="usersDl">
                 <query>
@@ -42,7 +43,7 @@
                     width="100%"
                     dataContainer="usersDc"
                     multiselect="true"
-                    >
+        >
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
@@ -57,6 +58,7 @@
                 <column id="lastName"/>
                 <column id="email"/>
                 <column id="enabled"/>
+                <column id="telephoneNumber"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"

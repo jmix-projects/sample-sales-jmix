@@ -11,6 +11,7 @@ public class KeycloakProperties {
     private String clientId;
     private String clientSecret;
     private String redirectUri;
+    private boolean synchronizeRoleAssignments;
 
     public String getIssuerUri() {
         return issuerUri;
@@ -42,5 +43,13 @@ public class KeycloakProperties {
 
     public void setRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
+    }
+
+    public boolean isSynchronizeRoleAssignments() {
+        return synchronizeRoleAssignments;
+    }
+
+    public void setSynchronizeRoleAssignments(boolean synchronizeRoleAssignments) {
+        this.synchronizeRoleAssignments = synchronizeRoleAssignments;
     }
 }

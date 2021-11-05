@@ -40,6 +40,7 @@
                 <textField id="lastNameField" property="lastName"/>
                 <textField id="emailField" property="email"/>
                 <checkBox id="enabledField" property="enabled"/>
+                <textField id="phoneNumberField" property="telephoneNumber"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">
