@@ -4,13 +4,8 @@ import io.jmix.security.StandardSecurityConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.social.connect.ConnectionFactoryLocator;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.mem.InMemoryUsersConnectionRepository;
@@ -37,8 +32,7 @@ public class SecurityConfig extends StandardSecurityConfiguration {
     @Bean
     public ProviderSignInController providerSignInController() {
         ConnectionFactoryLocator connectionFactoryLocator = connectionFactoryLocator();
-        UsersConnectionRepository usersConnectionRepository = getUsersConnectionRepository(connectionFactoryLocator);
-        ((InMemoryUsersConnectionRepository) usersConnectionRepository).setConnectionSignUp(facebookConnectionSignup);
+        UsersConnectionRepository usersConnectionRepository = usersConnectionRepository();
         ProviderSignInController providerSignInController = new ProviderSignInController(connectionFactoryLocator, usersConnectionRepository, facebookSignInAdapter());
         providerSignInController.setPostSignInUrl(postSignInUrl);
         return providerSignInController;
@@ -48,8 +42,9 @@ public class SecurityConfig extends StandardSecurityConfiguration {
     public FacebookSignInAdapter facebookSignInAdapter() {
         return new FacebookSignInAdapter();
     }
-    
-    private ConnectionFactoryLocator connectionFactoryLocator() {
+
+    @Bean
+    public ConnectionFactoryLocator connectionFactoryLocator() {
         ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
         FacebookConnectionFactory connectionFactory = new FacebookConnectionFactory(appId, appSecret);
         connectionFactory.setScope("public_profile,email");
@@ -57,15 +52,16 @@ public class SecurityConfig extends StandardSecurityConfiguration {
         return registry;
     }
 
-    private UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
-        return new InMemoryUsersConnectionRepository(connectionFactoryLocator);
+    @Bean
+    public UsersConnectionRepository usersConnectionRepository() {
+        InMemoryUsersConnectionRepository repository = new InMemoryUsersConnectionRepository(connectionFactoryLocator());
+        repository.setConnectionSignUp(facebookConnectionSignup);
+        return repository;
     }
 
     @Bean
     public ProviderSignIn providerSignIn() {
         ConnectionFactoryLocator connectionFactoryLocator = connectionFactoryLocator();
-        UsersConnectionRepository usersConnectionRepository = getUsersConnectionRepository(connectionFactoryLocator);
-        ((InMemoryUsersConnectionRepository) usersConnectionRepository).setConnectionSignUp(facebookConnectionSignup);
         return new ProviderSignIn(connectionFactoryLocator);
     }
 }
