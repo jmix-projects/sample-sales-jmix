@@ -1,5 +1,6 @@
 package com.company.samplesales.screen.login;
 
+import com.company.samplesales.facebook.ProviderSignIn;
 import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.securityui.authentication.AuthDetails;
@@ -7,12 +8,12 @@ import io.jmix.securityui.authentication.LoginScreenSupport;
 import io.jmix.ui.JmixApp;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.action.Action;
-import io.jmix.ui.component.CheckBox;
-import io.jmix.ui.component.ComboBox;
-import io.jmix.ui.component.PasswordField;
-import io.jmix.ui.component.TextField;
+import io.jmix.ui.component.*;
 import io.jmix.ui.navigation.Route;
-import io.jmix.ui.screen.*;
+import io.jmix.ui.screen.Screen;
+import io.jmix.ui.screen.Subscribe;
+import io.jmix.ui.screen.UiController;
+import io.jmix.ui.screen.UiDescriptor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -50,6 +51,9 @@ public class LoginScreen extends Screen {
     private MessageTools messageTools;
     @Autowired
     private JmixApp jmixApp;
+
+    @Autowired
+    private ProviderSignIn providerSignIn;
 
     @Subscribe
     private void onInit(InitEvent event) {
@@ -95,5 +99,10 @@ public class LoginScreen extends Screen {
                     .withDescription(e.getMessage())
                     .show();
         }
+    }
+
+    @Subscribe("facebookButton")
+    public void onFacebookButtonClick(Button.ClickEvent event) {
+        providerSignIn.redirectToFacebook();
     }
 }

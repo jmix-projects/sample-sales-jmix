@@ -50,8 +50,19 @@ public class User implements JmixUserDetails {
     @Column(name = "ENABLED")
     protected Boolean enabled = true;
 
+    @Column(name = "SOCIAL_ID")
+    private String socialId;
+
     @Transient
     protected Collection<? extends GrantedAuthority> authorities;
+
+    public String getSocialId() {
+        return socialId;
+    }
+
+    public void setSocialId(String socialId) {
+        this.socialId = socialId;
+    }
 
     public UUID getId() {
         return id;

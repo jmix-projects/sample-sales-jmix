@@ -39,6 +39,7 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
+
     runtimeOnly 'org.hsqldb:hsqldb'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
@@ -46,6 +47,7 @@ dependencies {
     }
     implementation("io.jmix.audit:jmix-audit-starter")
     implementation("io.jmix.audit:jmix-audit-ui-starter")
+    implementation 'org.springframework.social:spring-social-facebook:2.0.3.RELEASE'
 }
 
 test {

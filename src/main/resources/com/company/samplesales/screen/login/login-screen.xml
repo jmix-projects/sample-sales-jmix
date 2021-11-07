@@ -56,6 +56,11 @@
                             align="MIDDLE_CENTER"
                             action="submit"
                             stylename="jmix-login-submit-button"/>
+
+                    <button id="facebookButton"
+                            align="MIDDLE_CENTER"
+                            stylename="jmix-login-submit-button" caption="msg://facebookButton.caption"
+                            icon="font-icon:FACEBOOK_OFFICIAL"/>
                 </vbox>
             </vbox>
         </vbox>
