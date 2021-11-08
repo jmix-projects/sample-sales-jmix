@@ -1,0 +1,44 @@
+version: '3'
+
+volumes:
+  postgres_data:
+    driver: local
+
+services:
+  postgres:
+    image: 'postgres:alpine'
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    restart: 'always'
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: keycloak
+      POSTGRES_HOST: postgres
+
+  keycloak:
+    image: jboss/keycloak:12.0.4
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: postgres
+      DB_PORT: 5432
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      DEBUG: 'true'
+      DEBUG_PORT: 5005
+      JAVA_OPTS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+    volumes:
+      - ./kk_data/data:/opt/jboss/keycloak/standalone/data
+      - ./kk_data/export:/opt/jboss/keycloak/export-dir
+      - ./kk_data/import:/opt/jboss/keycloak/import-dir
+      - ./kk_data/deployments:/opt/jboss/keycloak/standalone/deployments
+    ports:
+      - 8180:8080
+      - 5005:5005
+    depends_on:
+      - postgres

@@ -74,7 +74,6 @@ public class KeycloakStandardSecurityConfiguration extends StandardSecurityConfi
             Collection<? extends GrantedAuthority> userAuthorities = getUserAuthorities(user);
             JmixOidcUser jmixUser = userSynchronization.synchronizeUserDetails(user, userAuthorities);
             return jmixUser;
-            //return new OidcUserDetails(getUserAuthorities(user), user.getIdToken(), user.getUserInfo());
         };
     }
 
