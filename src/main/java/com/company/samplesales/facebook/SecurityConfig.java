@@ -58,10 +58,4 @@ public class SecurityConfig extends StandardSecurityConfiguration {
         repository.setConnectionSignUp(facebookConnectionSignup);
         return repository;
     }
-
-    @Bean
-    public ProviderSignIn providerSignIn() {
-        ConnectionFactoryLocator connectionFactoryLocator = connectionFactoryLocator();
-        return new ProviderSignIn(connectionFactoryLocator);
-    }
 }

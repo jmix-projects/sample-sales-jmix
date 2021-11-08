@@ -1,10 +1,10 @@
 package com.company.samplesales.screen.login;
 
-import com.company.samplesales.facebook.ProviderSignIn;
 import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.securityui.authentication.AuthDetails;
 import io.jmix.securityui.authentication.LoginScreenSupport;
+import io.jmix.ui.AppUI;
 import io.jmix.ui.JmixApp;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.action.Action;
@@ -18,6 +18,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
+import org.vaadin.olli.FormSenderBuilder;
+import org.vaadin.olli.client.Method;
 
 import java.util.Locale;
 
@@ -51,9 +53,6 @@ public class LoginScreen extends Screen {
     private MessageTools messageTools;
     @Autowired
     private JmixApp jmixApp;
-
-    @Autowired
-    private ProviderSignIn providerSignIn;
 
     @Subscribe
     private void onInit(InitEvent event) {
@@ -103,6 +102,11 @@ public class LoginScreen extends Screen {
 
     @Subscribe("facebookButton")
     public void onFacebookButtonClick(Button.ClickEvent event) {
-        providerSignIn.redirectToFacebook();
+        FormSenderBuilder.create()
+                .withUI(AppUI.getCurrent())
+                .withTarget("_self")
+                .withAction("/signin/facebook") // see org.springframework.social.connect.web.ProviderSignInController#signIn()
+                .withMethod(Method.POST)
+                .submit();
     }
 }
