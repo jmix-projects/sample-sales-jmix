@@ -18,5 +18,10 @@ The application project covers the following aspects:
 
 Based on Jmix Framework 1.0.0
 
+# Additional examples in Branches
+Here you may find some examples of Sale implementation using different components. All the examples are divided into the branches. Here's a full list of available examples:
+
+* Using external KeyCloak Identity service The example is available in the branch [security-advanced-keycloak-complete](https://github.com/jmix-projects/sample-sales-jmix/tree/security-advanced-keycloak-complete).
+
 # Issues
 Please use https://www.cuba-platform.com/discuss/c/jmix/40 for discussion, support and reporting problems corresponding to this sample.
