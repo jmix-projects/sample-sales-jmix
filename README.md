@@ -16,7 +16,23 @@ The application project covers the following aspects:
   - Visual editing of the existing screens
 - Creating Integration Tests
 
-Based on Jmix Framework 0.3.1
+Based on Jmix Framework 1.3.2
 
-# Issues
-Please use https://www.cuba-platform.com/discuss/c/jmix/40 for discussion, support and reporting problems corresponding to this sample.
+In this branch the following addons are added:
+- Audit, sessions
+- AWS File Storage
+- BPM
+- Charts, Pivot Table
+- Dashboards
+- Data Tools
+- Dynamic Attributes
+- GrapeJS
+- Grid Export Actions
+- Email Sending
+- Email Templates
+- IMAP
+- Maps
+- Multitenancy
+- Reports
+- Rest API
+- Translation (ru)

@@ -1,12 +1,12 @@
 plugins {
-    id 'io.jmix' version '1.0.0-M3'
+    id 'io.jmix' version '1.3.0'
     id 'java'
 }
 
 apply plugin: 'org.springframework.boot'
 
 jmix {
-    bomVersion = '1.0.999-SNAPSHOT'
+    bomVersion = '1.3.2'
     projectId = 'sales'
 }
 
@@ -15,7 +15,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenCentral() 
+    mavenCentral()
     maven {
         url 'https://nexus.jmix.io/repository/public'
     }
@@ -94,9 +94,6 @@ dependencies {
     implementation "io.jmix.imap:jmix-imap-starter"
     implementation "io.jmix.multitenancy:jmix-multitenancy-ui-starter"
     implementation "io.jmix.multitenancy:jmix-multitenancy-starter"
-    implementation "io.jmix.graphql:jmix-graphql-starter"
-    runtimeOnly "com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.1"
-
 }
 
 test {
@@ -104,4 +101,5 @@ test {
 }
 compileWidgets {
     generate "com.company.samplesales.widgets.CustomWidgetSet"
+    includePaths("**/io/jmix/**/widget/**", "**/com/company/samplesales/widgets/**")
 }

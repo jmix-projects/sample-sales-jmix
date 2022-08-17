@@ -9,6 +9,7 @@
               <entry key="main">
                 <value>
                   <DataStoreSettings>
+                    <option name="generateDdlType" value="CREATE_AND_UPDATE" />
                     <option name="supportedTypes">
                       <option value="hsql" />
                     </option>
@@ -22,13 +23,6 @@
     </moduleSettings>
   </component>
   <component name="JmixLiquibaseChangesConfig">
-    <exclude-change idName="FK_REPORT_EXEC_TO_REPORT" tagName="dropForeignKeyConstraint" />
-    <exclude-change idName="FK_REPORT_TEMPLATE_TO_REPORT" tagName="dropForeignKeyConstraint" />
-    <exclude-change idName="FK_REPORT_TO_DEF_TEMPLATE" tagName="dropForeignKeyConstraint" />
-    <exclude-change idName="FK_REPORT_TO_REPORT_GROUP" tagName="dropForeignKeyConstraint" />
-    <exclude-change idName="REPORT_EXECUTION" tagName="dropTable" />
-    <exclude-change idName="REPORT_GROUP" tagName="dropTable" />
-    <exclude-change idName="REPORT_REPORT" tagName="dropTable" />
-    <exclude-change idName="REPORT_TEMPLATE" tagName="dropTable" />
+    <exclude-change idName="PERSISTENT_LOGINS" tagName="dropTable" />
   </component>
 </project>
